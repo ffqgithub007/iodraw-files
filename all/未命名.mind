@@ -1,1 +1,1 @@
-{"root":{"data":{"id":"d7pko75ttm00","created":1739272576474,"text":"kubernetes"},"children":[{"data":{"id":"d7pkovlyp6w0","created":1739272629693,"text":"分支主题"},"children":[]}]},"template":"default","theme":"fresh-blue","version":"1.4.43"}
+{"root":{"data":{"id":"d7pko75ttm00","created":1739272576474,"text":"kubernetes"},"children":[{"data":{"id":"d7pkovlyp6w0","created":1739272629693,"text":"基础命令"},"children":[]},{"data":{"id":"d7pkozr54z40","created":1739272638713,"text":"分支主题"},"children":[]}]},"template":"default","theme":"fresh-blue","version":"1.4.43"}
