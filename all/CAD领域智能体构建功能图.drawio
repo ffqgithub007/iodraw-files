@@ -1,0 +1,209 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="mGKxI7c0uBmT6K5nZ8IO">
+    <mxGraphModel dx="1509" dy="781" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="TEo7D2LyrBPg_30crF01-33" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=26;fontColor=#0d1b2a;fontFamily=PingFang SC;fontStyle=1;" value="&lt;b&gt;工业CAD·PMI标注与智能出图智能体架构&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="700" x="630" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-34" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=13;fontColor=#546e7a;fontFamily=PingFang SC;" value="基于 GD&amp;T / ISO 标准 · 支持主流 CAD 内核（CATIA / NX / Creo / SolidWorks）" vertex="1">
+          <mxGeometry height="28" width="600" x="680" y="336" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-35" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;strokeWidth=2;fontFamily=PingFang SC;opacity=25;" value="" vertex="1">
+          <mxGeometry height="100" width="1100" x="290" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-36" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=15;fontColor=#0d47a1;fontFamily=PingFang SC;" value="&lt;b&gt;👤 用户与协同层&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="180" x="310" y="389" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-37" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=12;fontFamily=PingFang SC;" value="🎨 设计师工作台" vertex="1">
+          <mxGeometry height="42" width="160" x="330" y="424" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-38" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=12;fontFamily=PingFang SC;" value="🔍 审核员面板" vertex="1">
+          <mxGeometry height="42" width="160" x="530" y="424" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-39" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=12;fontFamily=PingFang SC;" value="📦 批量任务队列" vertex="1">
+          <mxGeometry height="42" width="160" x="730" y="424" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-40" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=12;fontFamily=PingFang SC;" value="🔄 PLM 集成门户" vertex="1">
+          <mxGeometry height="42" width="160" x="930" y="424" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-41" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=12;fontFamily=PingFang SC;" value="📱 移动审批" vertex="1">
+          <mxGeometry height="42" width="160" x="1130" y="424" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-42" edge="1" parent="1" source="TEo7D2LyrBPg_30crF01-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474f;strokeWidth=2;entryX=0.5;entryY=0;exitX=0.5;exitY=1;" target="TEo7D2LyrBPg_30crF01-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-43" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#2e7d32;strokeWidth=2;fontFamily=PingFang SC;opacity=25;" value="" vertex="1">
+          <mxGeometry height="120" width="1100" x="290" y="514" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-44" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=15;fontColor=#1b5e20;fontFamily=PingFang SC;" value="&lt;b&gt;🔧 CAD 数据感知与解析层&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="240" x="310" y="519" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-45" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;" value="📂 多格式导入 (STEP/IGES/Parasolid)" vertex="1">
+          <mxGeometry height="40" width="190" x="310" y="559" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-46" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;" value="🧊 B-Rep 几何解析" vertex="1">
+          <mxGeometry height="40" width="160" x="520" y="559" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-47" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;" value="🔩 特征识别 (孔/槽/筋/面)" vertex="1">
+          <mxGeometry height="40" width="180" x="700" y="559" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-48" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;" value="🔗 装配体结构与BOM抽取" vertex="1">
+          <mxGeometry height="40" width="180" x="900" y="559" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-49" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;" value="🏷️ 元数据提取 (材质/公差/热处理)" vertex="1">
+          <mxGeometry height="40" width="190" x="1100" y="559" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-50" edge="1" parent="1" source="TEo7D2LyrBPg_30crF01-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474f;strokeWidth=2;entryX=0.5;entryY=0;exitX=0.5;exitY=1;" target="TEo7D2LyrBPg_30crF01-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-51" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;strokeWidth=3;fontFamily=PingFang SC;opacity=25;" value="" vertex="1">
+          <mxGeometry height="130" width="1100" x="290" y="664" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-52" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=15;fontColor=#bf360c;fontFamily=PingFang SC;" value="&lt;b&gt;🧠 PMI 语义理解与标准引擎 ⭐&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="280" x="310" y="669" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-53" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=11;fontFamily=PingFang SC;fontStyle=1;" value="📐 GD&amp;T 语义解析 (ASME Y14.5)" vertex="1">
+          <mxGeometry height="48" width="200" x="310" y="709" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-54" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=11;fontFamily=PingFang SC;fontStyle=1;" value="🌍 ISO GPS 标准引擎 (ISO 1101)" vertex="1">
+          <mxGeometry height="48" width="200" x="540" y="709" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-55" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=11;fontFamily=PingFang SC;fontStyle=1;" value="🎯 基准体系推理 (Datum System)" vertex="1">
+          <mxGeometry height="48" width="210" x="770" y="709" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-56" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=11;fontFamily=PingFang SC;fontStyle=1;" value="⚙️ 公差累积分析 (Stack-up)" vertex="1">
+          <mxGeometry height="48" width="200" x="1010" y="709" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-57" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=11;fontFamily=PingFang SC;fontStyle=1;" value="📋 行业规则库 (航空/汽车/医疗)" vertex="1">
+          <mxGeometry height="48" width="210" x="1240" y="709" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-58" edge="1" parent="1" source="TEo7D2LyrBPg_30crF01-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474f;strokeWidth=2;entryX=0.5;entryY=0;exitX=0.5;exitY=1;" target="TEo7D2LyrBPg_30crF01-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-59" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#6a1b9a;strokeWidth=2;fontFamily=PingFang SC;opacity=25;" value="" vertex="1">
+          <mxGeometry height="130" width="1100" x="290" y="824" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-60" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=15;fontColor=#4a148c;fontFamily=PingFang SC;" value="&lt;b&gt;🤖 智能标注与出图引擎&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="230" x="310" y="829" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-61" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#6a1b9a;fontColor=#4a148c;fontSize=11;fontFamily=PingFang SC;" value="🏷️ 自动尺寸标注" vertex="1">
+          <mxGeometry height="42" width="150" x="310" y="869" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-62" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#6a1b9a;fontColor=#4a148c;fontSize=11;fontFamily=PingFang SC;" value="📐 自动形位公差标注" vertex="1">
+          <mxGeometry height="42" width="160" x="480" y="869" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-63" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#6a1b9a;fontColor=#4a148c;fontSize=11;fontFamily=PingFang SC;" value="🔲 表面粗糙度标注" vertex="1">
+          <mxGeometry height="42" width="160" x="660" y="869" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-64" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#6a1b9a;fontColor=#4a148c;fontSize=11;fontFamily=PingFang SC;" value="📝 技术条件自动生成" vertex="1">
+          <mxGeometry height="42" width="160" x="840" y="869" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-65" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ce93d8;strokeColor=#6a1b9a;fontColor=#4a148c;fontSize=11;fontFamily=PingFang SC;fontStyle=1;" value="📐 视图自动布局 (三视图/剖视图)" vertex="1">
+          <mxGeometry height="48" width="200" x="1020" y="864" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-66" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ce93d8;strokeColor=#6a1b9a;fontColor=#4a148c;fontSize=11;fontFamily=PingFang SC;fontStyle=1;" value="📏 尺寸链自动布局" vertex="1">
+          <mxGeometry height="48" width="160" x="1240" y="864" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-67" edge="1" parent="1" source="TEo7D2LyrBPg_30crF01-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474f;strokeWidth=2;entryX=0.5;entryY=0;exitX=0.5;exitY=1;" target="TEo7D2LyrBPg_30crF01-68">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-68" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f7fa;strokeColor=#00838f;strokeWidth=2;fontFamily=PingFang SC;opacity=25;" value="" vertex="1">
+          <mxGeometry height="100" width="1100" x="290" y="984" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-69" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=15;fontColor=#006064;fontFamily=PingFang SC;" value="&lt;b&gt;✅ 图纸审查与质量闭环&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="230" x="310" y="989" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-70" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2ebf2;strokeColor=#00838f;fontColor=#006064;fontSize=11;fontFamily=PingFang SC;" value="📋 规则自动校验 (完整性/一致性)" vertex="1">
+          <mxGeometry height="42" width="200" x="310" y="1024" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-71" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2ebf2;strokeColor=#00838f;fontColor=#006064;fontSize=11;fontFamily=PingFang SC;" value="⚠️ 标注冲突检测" vertex="1">
+          <mxGeometry height="42" width="170" x="540" y="1024" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-72" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2ebf2;strokeColor=#00838f;fontColor=#006064;fontSize=11;fontFamily=PingFang SC;" value="🧠 AI 异常检测 (与历史图纸比对)" vertex="1">
+          <mxGeometry height="42" width="220" x="740" y="1024" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-73" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2ebf2;strokeColor=#00838f;fontColor=#006064;fontSize=11;fontFamily=PingFang SC;" value="🔄 人工审核反馈 → 模型微调" vertex="1">
+          <mxGeometry height="42" width="220" x="990" y="1024" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-74" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2ebf2;strokeColor=#00838f;fontColor=#006064;fontSize=11;fontFamily=PingFang SC;" value="📄 标准化图纸输出 (PDF/DWG)" vertex="1">
+          <mxGeometry height="42" width="190" x="1240" y="1024" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-75" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#c62828;strokeWidth=2;fontFamily=PingFang SC;opacity=25;dashed=1;" value="" vertex="1">
+          <mxGeometry height="700" width="210" x="1420" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-76" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;fontSize=15;fontColor=#b71c1c;fontFamily=PingFang SC;" value="&lt;b&gt;📚 领域知识库&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="170" x="1440" y="394" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-77" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcdd2;strokeColor=#c62828;fontColor=#b71c1c;fontSize=11;fontFamily=PingFang SC;" value="📖 标准规范库 (ISO/ASME/GB)" vertex="1">
+          <mxGeometry height="42" width="170" x="1440" y="444" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-78" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcdd2;strokeColor=#c62828;fontColor=#b71c1c;fontSize=11;fontFamily=PingFang SC;" value="📐 历史图纸模板库" vertex="1">
+          <mxGeometry height="42" width="170" x="1440" y="514" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-79" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcdd2;strokeColor=#c62828;fontColor=#b71c1c;fontSize=11;fontFamily=PingFang SC;" value="🧪 材料与工艺库" vertex="1">
+          <mxGeometry height="42" width="170" x="1440" y="584" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-80" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcdd2;strokeColor=#c62828;fontColor=#b71c1c;fontSize=11;fontFamily=PingFang SC;" value="🏆 最佳实践知识图谱" vertex="1">
+          <mxGeometry height="42" width="170" x="1440" y="654" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-81" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcdd2;strokeColor=#c62828;fontColor=#b71c1c;fontSize=11;fontFamily=PingFang SC;" value="🗄️ 向量检索库 (RAG)" vertex="1">
+          <mxGeometry height="42" width="170" x="1440" y="724" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-82" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcdd2;strokeColor=#c62828;fontColor=#b71c1c;fontSize=11;fontFamily=PingFang SC;" value="👤 设计师偏好模型" vertex="1">
+          <mxGeometry height="42" width="170" x="1440" y="794" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-83" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eceff1;strokeColor=#546e7a;strokeWidth=2;fontFamily=PingFang SC;opacity=20;" value="" vertex="1">
+          <mxGeometry height="60" width="1100" x="290" y="1114" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-84" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=13;fontColor=#37474f;fontFamily=PingFang SC;" value="&lt;b&gt;⚙️ 基础算力与集成层&lt;/b&gt;" vertex="1">
+          <mxGeometry height="24" width="200" x="310" y="1119" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-85" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#546e7a;fontColor=#37474f;fontSize=11;fontFamily=PingFang SC;" value="🧠 LLM 推理集群" vertex="1">
+          <mxGeometry height="24" width="150" x="310" y="1144" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-86" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#546e7a;fontColor=#37474f;fontSize=11;fontFamily=PingFang SC;" value="🖥️ CAD 内核服务" vertex="1">
+          <mxGeometry height="24" width="150" x="490" y="1144" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-87" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#546e7a;fontColor=#37474f;fontSize=11;fontFamily=PingFang SC;" value="🗂️ PLM/PDM 集成" vertex="1">
+          <mxGeometry height="24" width="150" x="670" y="1144" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-88" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#546e7a;fontColor=#37474f;fontSize=11;fontFamily=PingFang SC;" value="📨 任务队列 (RabbitMQ/Kafka)" vertex="1">
+          <mxGeometry height="24" width="180" x="850" y="1144" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-89" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#546e7a;fontColor=#37474f;fontSize=11;fontFamily=PingFang SC;" value="📊 可观测性 (Prometheus/Grafana)" vertex="1">
+          <mxGeometry height="24" width="200" x="1060" y="1144" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-90" edge="1" parent="1" source="TEo7D2LyrBPg_30crF01-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=2;dashed=1;fontColor=#2e7d32;fontSize=11;fontFamily=PingFang SC;" target="TEo7D2LyrBPg_30crF01-43" value="CAD模型">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-91" edge="1" parent="1" source="TEo7D2LyrBPg_30crF01-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=2;dashed=1;fontColor=#e65100;fontSize=11;fontFamily=PingFang SC;" target="TEo7D2LyrBPg_30crF01-51" value="PMI语义">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-92" edge="1" parent="1" source="TEo7D2LyrBPg_30crF01-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6a1b9a;strokeWidth=2;dashed=1;fontColor=#6a1b9a;fontSize=11;fontFamily=PingFang SC;" target="TEo7D2LyrBPg_30crF01-59" value="标注指令">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-93" edge="1" parent="1" source="TEo7D2LyrBPg_30crF01-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#00838f;strokeWidth=2;dashed=1;fontColor=#00838f;fontSize=11;fontFamily=PingFang SC;" target="TEo7D2LyrBPg_30crF01-68" value="图纸校验">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-94" edge="1" parent="1" source="TEo7D2LyrBPg_30crF01-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#c62828;strokeWidth=1.5;dashed=1;fontColor=#c62828;fontSize=10;fontFamily=PingFang SC;exitX=1;exitY=0.5;entryX=0;entryY=0.3;" target="TEo7D2LyrBPg_30crF01-77">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1405" y="729" />
+              <mxPoint x="1405" y="465" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TEo7D2LyrBPg_30crF01-95" edge="1" parent="1" source="TEo7D2LyrBPg_30crF01-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#c62828;strokeWidth=1.5;dashed=1;fontColor=#c62828;fontSize=10;fontFamily=PingFang SC;exitX=1;exitY=0.5;entryX=0;entryY=0.7;" target="TEo7D2LyrBPg_30crF01-78">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1405" y="889" />
+              <mxPoint x="1405" y="535" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
