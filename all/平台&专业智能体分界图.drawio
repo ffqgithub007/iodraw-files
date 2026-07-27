@@ -1,0 +1,111 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="功能分界图" id="WtTDr4I-gpoAqVCsRTHY">
+    <mxGraphModel dx="1283" dy="664" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DnOHc31jljWA_oqjQL_h-1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=22;fontColor=#1a1a2e;fontFamily=PingFang SC;" value="&lt;b&gt;专业智能体 vs 平台级智能体 · 功能分界图&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="700" x="560" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;strokeWidth=3;fontFamily=PingFang SC;opacity=20;" value="" vertex="1">
+          <mxGeometry height="700" width="520" x="300" y="324" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;fontSize=18;fontColor=#bf360c;fontFamily=PingFang SC;" value="&lt;b&gt;🏗️ 平台级智能体 (Platform Agent)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="32" width="360" x="380" y="334" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=13;fontFamily=PingFang SC;align=left;spacingLeft=12;" value="🔌 &lt;b&gt;统一入口&lt;/b&gt; — 唯一对外 API 网关" vertex="1">
+          <mxGeometry height="44" width="460" x="330" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=13;fontFamily=PingFang SC;align=left;spacingLeft=12;" value="🔐 &lt;b&gt;鉴权与多租户&lt;/b&gt; — RBAC / 会话归属" vertex="1">
+          <mxGeometry height="44" width="460" x="330" y="444" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=13;fontFamily=PingFang SC;align=left;spacingLeft=12;" value="📤 &lt;b&gt;并发与调度&lt;/b&gt; — 信号量准入 / 背压控制" vertex="1">
+          <mxGeometry height="44" width="460" x="330" y="504" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=13;fontFamily=PingFang SC;align=left;spacingLeft=12;" value="📡 &lt;b&gt;流式推送&lt;/b&gt; — SSE/WS 事件分发" vertex="1">
+          <mxGeometry height="44" width="460" x="330" y="564" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=13;fontFamily=PingFang SC;align=left;spacingLeft=12;" value="📋 &lt;b&gt;事件账本&lt;/b&gt; — 执行事实记录与回放" vertex="1">
+          <mxGeometry height="44" width="460" x="330" y="624" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=13;fontFamily=PingFang SC;align=left;spacingLeft=12;" value="⏰ &lt;b&gt;事件驱动&lt;/b&gt; — 定时触发 / 外部轮询" vertex="1">
+          <mxGeometry height="44" width="460" x="330" y="684" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=13;fontFamily=PingFang SC;align=left;spacingLeft=12;" value="📊 &lt;b&gt;可观测性&lt;/b&gt; — 指标 / 链路 / 健康聚合" vertex="1">
+          <mxGeometry height="44" width="460" x="330" y="744" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=13;fontFamily=PingFang SC;align=left;spacingLeft=12;" value="💾 &lt;b&gt;存储抽象&lt;/b&gt; — PG / Redis / MinIO 统一访问" vertex="1">
+          <mxGeometry height="44" width="460" x="330" y="804" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcc80;strokeColor=#e65100;fontColor=#bf360c;fontSize=13;fontFamily=PingFang SC;fontStyle=1;align=left;spacingLeft=12;" value="🔄 &lt;b&gt;生命周期管理&lt;/b&gt; — Run 创建/暂停/恢复/终止" vertex="1">
+          <mxGeometry height="44" width="460" x="330" y="864" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcc80;strokeColor=#e65100;fontColor=#bf360c;fontSize=13;fontFamily=PingFang SC;fontStyle=1;align=left;spacingLeft=12;" value="🧩 &lt;b&gt;协议适配&lt;/b&gt; — AG-UI / MCP / A2A 网关" vertex="1">
+          <mxGeometry height="44" width="460" x="330" y="924" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#2e7d32;strokeWidth=3;fontFamily=PingFang SC;opacity=20;" value="" vertex="1">
+          <mxGeometry height="700" width="520" x="880" y="324" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-15" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;fontSize=18;fontColor=#1b5e20;fontFamily=PingFang SC;" value="&lt;b&gt;🧠 专业智能体 (Specialist Agent)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="32" width="360" x="960" y="334" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=13;fontFamily=PingFang SC;align=left;spacingLeft=12;" value="🧠 &lt;b&gt;大模型推理&lt;/b&gt; — LLM 调用与调度" vertex="1">
+          <mxGeometry height="44" width="460" x="910" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=13;fontFamily=PingFang SC;align=left;spacingLeft=12;" value="📋 &lt;b&gt;任务规划&lt;/b&gt; — ReAct / Plan-Execute 编排" vertex="1">
+          <mxGeometry height="44" width="460" x="910" y="444" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=13;fontFamily=PingFang SC;align=left;spacingLeft=12;" value="🔧 &lt;b&gt;工具调用&lt;/b&gt; — 本地工具 / MCP / Skill" vertex="1">
+          <mxGeometry height="44" width="460" x="910" y="504" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=13;fontFamily=PingFang SC;align=left;spacingLeft=12;" value="🧩 &lt;b&gt;子任务并行&lt;/b&gt; — Send 扇出 / 状态合并" vertex="1">
+          <mxGeometry height="44" width="460" x="910" y="564" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=13;fontFamily=PingFang SC;align=left;spacingLeft=12;" value="🔄 &lt;b&gt;反思与自我修正&lt;/b&gt; — 质量检查 / 重生成" vertex="1">
+          <mxGeometry height="44" width="460" x="910" y="624" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=13;fontFamily=PingFang SC;align=left;spacingLeft=12;" value="🧠 &lt;b&gt;记忆管理&lt;/b&gt; — Checkpoint / 向量记忆" vertex="1">
+          <mxGeometry height="44" width="460" x="910" y="684" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=13;fontFamily=PingFang SC;align=left;spacingLeft=12;" value="📚 &lt;b&gt;RAG 检索增强&lt;/b&gt; — 知识库 / 向量检索" vertex="1">
+          <mxGeometry height="44" width="460" x="910" y="744" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a5d6a7;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=13;fontFamily=PingFang SC;fontStyle=1;align=left;spacingLeft=12;" value="🔄 &lt;b&gt;状态持久化&lt;/b&gt; — 可中断/可恢复" vertex="1">
+          <mxGeometry height="44" width="460" x="910" y="804" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-24" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a5d6a7;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=13;fontFamily=PingFang SC;fontStyle=1;align=left;spacingLeft=12;" value="🔍 &lt;b&gt;领域专家能力&lt;/b&gt; — 搜索/代码/分析/..." vertex="1">
+          <mxGeometry height="44" width="460" x="910" y="864" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-25" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a5d6a7;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=13;fontFamily=PingFang SC;fontStyle=1;align=left;spacingLeft=12;" value="📊 &lt;b&gt;产物生成&lt;/b&gt; — 报告/图表/代码/..." vertex="1">
+          <mxGeometry height="44" width="460" x="910" y="924" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-26" edge="1" parent="1" source="DnOHc31jljWA_oqjQL_h-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6a1b9a;strokeWidth=3;dashed=1;entryX=0;entryY=0.5;exitX=1;exitY=0.5;" target="DnOHc31jljWA_oqjQL_h-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="840" y="674" />
+              <mxPoint x="860" y="674" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-27" parent="1" style="text;html=1;strokeColor=none;fillColor=#f3e5f5;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=13;fontColor=#4a148c;fontFamily=PingFang SC;rounded=1;strokeWidth=1;strokeColor=#6a1b9a;" value="&lt;b&gt;gRPC 流式&lt;br&gt;双向通信&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="70" x="815" y="644" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-28" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#9e9e9e;strokeWidth=1;fontFamily=PingFang SC;" value="" vertex="1">
+          <mxGeometry height="50" width="1100" x="300" y="1044" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-29" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=13;fontColor=#37474f;fontFamily=PingFang SC;fontStyle=1;" value="&lt;b&gt;协作原则&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="100" x="320" y="1059" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-30" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontColor=#546e7a;fontFamily=PingFang SC;" value="① 平台是唯一对外入口，专业智能体不直接暴露接口" vertex="1">
+          <mxGeometry height="20" width="320" x="440" y="1059" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-31" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontColor=#546e7a;fontFamily=PingFang SC;" value="② 专业智能体专注认知推理与工具执行，不处理基础设施" vertex="1">
+          <mxGeometry height="20" width="340" x="780" y="1059" as="geometry" />
+        </mxCell>
+        <mxCell id="DnOHc31jljWA_oqjQL_h-32" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontColor=#546e7a;fontFamily=PingFang SC;" value="③ 通过事件账本实现执行事实的统一记录与回放" vertex="1">
+          <mxGeometry height="20" width="280" x="1140" y="1059" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
