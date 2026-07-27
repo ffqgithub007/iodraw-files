@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="CATIA PMI自动标注智能体全景图" id="0My1EL8n96h5hm49uq5b">
-    <mxGraphModel dx="1283" dy="664" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1426" dy="738" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -135,6 +135,255 @@
         </mxCell>
         <mxCell id="Xbv89XMGpe886tEXvjuK-44" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontColor=#e65100;fontFamily=PingFang SC;fontStyle=1;" value="一键系列扩展 · 批量出图" vertex="1">
           <mxGeometry height="20" width="220" x="890" y="839" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=22;fontColor=#1a1a2e;fontFamily=PingFang SC;" value="&lt;b&gt;CATIA PMI 自动标注智能体 · 系统架构图&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="700" x="700" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=13;fontColor=#78909c;fontFamily=PingFang SC;" value="CAA (C++/COM) 二次开发 · Visual Studio + RADE 集成环境" vertex="1">
+          <mxGeometry height="24" width="600" x="750" y="1188" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;strokeWidth=2;fontFamily=PingFang SC;opacity=20;" value="" vertex="1">
+          <mxGeometry height="90" width="1200" x="440" y="1234" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-4" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=15;fontColor=#0d47a1;fontFamily=PingFang SC;" value="&lt;b&gt;🖥️ 用户界面层 (CATIA 集成)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="24" width="260" x="460" y="1242" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=12;fontFamily=PingFang SC;" value="🔧 自定义工具栏" vertex="1">
+          <mxGeometry height="38" width="160" x="480" y="1276" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=12;fontFamily=PingFang SC;" value="📋 参数配置对话框" vertex="1">
+          <mxGeometry height="38" width="160" x="670" y="1276" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=12;fontFamily=PingFang SC;" value="📦 批量处理面板" vertex="1">
+          <mxGeometry height="38" width="160" x="860" y="1276" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=12;fontFamily=PingFang SC;" value="👁️ 标注预览视图" vertex="1">
+          <mxGeometry height="38" width="160" x="1050" y="1276" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=12;fontFamily=PingFang SC;" value="📊 日志输出窗口" vertex="1">
+          <mxGeometry height="38" width="160" x="1240" y="1276" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-10" edge="1" parent="1" source="S4XG45Wahda2dK0s9bxt-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#546e7a;strokeWidth=2;" target="S4XG45Wahda2dK0s9bxt-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#2e7d32;strokeWidth=3;fontFamily=PingFang SC;opacity=20;" value="" vertex="1">
+          <mxGeometry height="240" width="1200" x="440" y="1354" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-12" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=16;fontColor=#1b5e20;fontFamily=PingFang SC;" value="&lt;b&gt;⚙️ 应用逻辑层 (CAA 二次开发模块)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="320" x="460" y="1362" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;strokeWidth=1;fontFamily=PingFang SC;opacity=50;" value="" vertex="1">
+          <mxGeometry height="175" width="270" x="460" y="1404" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-14" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;fontSize=13;fontColor=#1b5e20;fontFamily=PingFang SC;" value="&lt;b&gt;🔍 特征提取模块&lt;/b&gt;" vertex="1">
+          <mxGeometry height="24" width="160" x="510" y="1412" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a5d6a7;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;align=center;" value="CGM 几何拓扑解析" vertex="1">
+          <mxGeometry height="32" width="230" x="480" y="1444" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a5d6a7;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;align=center;" value="基于规则的制造特征识别" vertex="1">
+          <mxGeometry height="32" width="230" x="480" y="1486" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a5d6a7;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;align=center;" value="几何信息与制造特征库匹配" vertex="1">
+          <mxGeometry height="32" width="230" x="480" y="1528" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;strokeWidth=1;fontFamily=PingFang SC;opacity=50;" value="" vertex="1">
+          <mxGeometry height="175" width="270" x="760" y="1404" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-19" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;fontSize=13;fontColor=#1b5e20;fontFamily=PingFang SC;" value="&lt;b&gt;📋 规则推理引擎&lt;/b&gt;" vertex="1">
+          <mxGeometry height="24" width="180" x="800" y="1412" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a5d6a7;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;align=center;" value="标准化标注模板库 (XML)" vertex="1">
+          <mxGeometry height="32" width="230" x="780" y="1444" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a5d6a7;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;align=center;" value="GD&amp;T / ISO 标准规则" vertex="1">
+          <mxGeometry height="32" width="230" x="780" y="1486" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a5d6a7;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;align=center;" value="标注优先级与冲突消解" vertex="1">
+          <mxGeometry height="32" width="230" x="780" y="1528" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#81c784;strokeColor=#2e7d32;strokeWidth=2;fontFamily=PingFang SC;opacity=50;" value="" vertex="1">
+          <mxGeometry height="175" width="270" x="1060" y="1404" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-24" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;fontSize=13;fontColor=#1b5e20;fontFamily=PingFang SC;" value="&lt;b&gt;🏷️ 标注生成器 ⭐&lt;/b&gt;" vertex="1">
+          <mxGeometry height="24" width="160" x="1120" y="1412" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-25" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#66bb6a;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;fontStyle=1;align=center;" value="📏 尺寸标注 (DL/DH/DR/DA)" vertex="1">
+          <mxGeometry height="32" width="230" x="1080" y="1444" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-26" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#66bb6a;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;fontStyle=1;align=center;" value="⚙️ 公差与形位公差标注" vertex="1">
+          <mxGeometry height="32" width="230" x="1080" y="1486" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#66bb6a;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;fontStyle=1;align=center;" value="🔲 表面粗糙度与文本标注" vertex="1">
+          <mxGeometry height="32" width="230" x="1080" y="1528" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-28" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;strokeWidth=1;fontFamily=PingFang SC;opacity=50;" value="" vertex="1">
+          <mxGeometry height="175" width="270" x="1360" y="1404" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-29" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;fontSize=13;fontColor=#1b5e20;fontFamily=PingFang SC;" value="&lt;b&gt;✅ 校验与自适应模块&lt;/b&gt;" vertex="1">
+          <mxGeometry height="24" width="160" x="1430" y="1412" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-30" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a5d6a7;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;align=center;" value="⚠️ 标注干涉检测" vertex="1">
+          <mxGeometry height="32" width="230" x="1380" y="1444" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-31" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a5d6a7;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;align=center;" value="🔄 标注位置自动调整" vertex="1">
+          <mxGeometry height="32" width="230" x="1380" y="1486" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-32" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a5d6a7;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;align=center;" value="📋 错误日志与预警" vertex="1">
+          <mxGeometry height="32" width="230" x="1380" y="1528" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-33" edge="1" parent="1" source="S4XG45Wahda2dK0s9bxt-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#546e7a;strokeWidth=2;" target="S4XG45Wahda2dK0s9bxt-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-34" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#6a1b9a;strokeWidth=2;fontFamily=PingFang SC;opacity=20;" value="" vertex="1">
+          <mxGeometry height="120" width="1200" x="440" y="1624" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-35" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=15;fontColor=#4a148c;fontFamily=PingFang SC;" value="&lt;b&gt;🔌 核心服务层 (CATIA API 调用)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="24" width="280" x="460" y="1632" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-36" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#6a1b9a;fontColor=#4a148c;fontSize=12;fontFamily=PingFang SC;align=center;fontStyle=1;" value="📐 FTA Module (Functional Tolerancing &amp; Annotation)" vertex="1">
+          <mxGeometry height="40" width="270" x="460" y="1669" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-37" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#6a1b9a;fontColor=#4a148c;fontSize=12;fontFamily=PingFang SC;align=center;fontStyle=1;" value="🧊 CGM Module (CATIA Geometric Modeler)" vertex="1">
+          <mxGeometry height="40" width="270" x="760" y="1669" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-38" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#6a1b9a;fontColor=#4a148c;fontSize=12;fontFamily=PingFang SC;align=center;fontStyle=1;" value="📦 Part Design / Product Design API" vertex="1">
+          <mxGeometry height="40" width="270" x="1060" y="1669" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-39" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#6a1b9a;fontColor=#4a148c;fontSize=12;fontFamily=PingFang SC;align=center;fontStyle=1;" value="📄 Drawing / Drafting API" vertex="1">
+          <mxGeometry height="40" width="270" x="1360" y="1669" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-40" edge="1" parent="1" source="S4XG45Wahda2dK0s9bxt-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#546e7a;strokeWidth=2;" target="S4XG45Wahda2dK0s9bxt-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-41" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eceff1;strokeColor=#546e7a;strokeWidth=2;fontFamily=PingFang SC;opacity=20;" value="" vertex="1">
+          <mxGeometry height="80" width="1200" x="440" y="1774" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-42" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=15;fontColor=#37474f;fontFamily=PingFang SC;" value="&lt;b&gt;💾 数据层&lt;/b&gt;" vertex="1">
+          <mxGeometry height="24" width="140" x="460" y="1782" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-43" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#546e7a;fontColor=#37474f;fontSize=11;fontFamily=PingFang SC;" value="📁 .CATPart / .CATProduct" vertex="1">
+          <mxGeometry height="30" width="170" x="460" y="1814" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-44" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#546e7a;fontColor=#37474f;fontSize=11;fontFamily=PingFang SC;" value="📄 .CATDrawing" vertex="1">
+          <mxGeometry height="30" width="170" x="660" y="1814" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-45" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#546e7a;fontColor=#37474f;fontSize=11;fontFamily=PingFang SC;" value="📋 XML 模板/配置" vertex="1">
+          <mxGeometry height="30" width="170" x="860" y="1814" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-46" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#546e7a;fontColor=#37474f;fontSize=11;fontFamily=PingFang SC;" value="📦 STEP / IGES" vertex="1">
+          <mxGeometry height="30" width="170" x="1060" y="1814" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-47" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#546e7a;fontColor=#37474f;fontSize=11;fontFamily=PingFang SC;" value="📊 日志 / 数据库" vertex="1">
+          <mxGeometry height="30" width="170" x="1260" y="1814" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-48" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontFamily=PingFang SC;opacity=30;" value="" vertex="1">
+          <mxGeometry height="55" width="1200" x="440" y="1884" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-49" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=13;fontColor=#616161;fontFamily=PingFang SC;" value="&lt;b&gt;🛠️ 开发环境&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="140" x="460" y="1892" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-50" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#9e9e9e;fontColor=#424242;fontSize=11;fontFamily=PingFang SC;" value="Visual Studio 2005/2015" vertex="1">
+          <mxGeometry height="22" width="180" x="460" y="1914" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-51" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#9e9e9e;fontColor=#424242;fontSize=11;fontFamily=PingFang SC;" value="RADE 快速应用开发环境" vertex="1">
+          <mxGeometry height="22" width="180" x="670" y="1914" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-52" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#9e9e9e;fontColor=#424242;fontSize=11;fontFamily=PingFang SC;" value="CAA API 函数库" vertex="1">
+          <mxGeometry height="22" width="180" x="880" y="1914" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-53" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#9e9e9e;fontColor=#424242;fontSize=11;fontFamily=PingFang SC;" value="COM 组件对象模型" vertex="1">
+          <mxGeometry height="22" width="180" x="1090" y="1914" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-54" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=22;fontColor=#1a1a2e;fontFamily=PingFang SC;" value="&lt;b&gt;PMI 自动标注智能体 · 输入/输出 Schema 定义&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="700" x="840" y="2290" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-55" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;strokeWidth=2;fontFamily=PingFang SC;opacity=20;" value="" vertex="1">
+          <mxGeometry height="740" width="600" x="580" y="2354" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-56" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;fontSize=18;fontColor=#0d47a1;fontFamily=PingFang SC;" value="&lt;b&gt;📥 输入 Schema&lt;/b&gt;" vertex="1">
+          <mxGeometry height="32" width="200" x="770" y="2364" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-57" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=13;fontFamily=PingFang SC;align=center;" value="&lt;b&gt;1. 3D 模型输入&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="540" x="610" y="2414" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-58" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=12;fontColor=#0d47a1;fontFamily=PingFang SC;" value="• CATPart / CATProduct 文件\n• 几何拓扑数据 (B-Rep / CGM)\n• 特征树结构 (PartBody / 几何集)\n• 参数化尺寸与约束" vertex="1">
+          <mxGeometry height="70" width="520" x="620" y="2460" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-59" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=13;fontFamily=PingFang SC;align=center;" value="&lt;b&gt;2. 标注样例模板 (XML)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="540" x="610" y="2550" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-60" parent="1" style="text;html=1;strokeColor=none;fillColor=#e8eaf6;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=12;fontColor=#1a237e;fontFamily=PingFang SC;rounded=1;strokeWidth=1;strokeColor=#3949ab;" value="&lt;font face=&quot;Courier New&quot; size=&quot;10&quot;&gt;&lt;b&gt;&amp;lt;AnnotationTemplate&amp;gt;&lt;/b&gt;\n  &lt;b&gt;&amp;lt;Dimension&amp;gt;&lt;/b&gt;\n    &amp;lt;Type&amp;gt;DL&amp;lt;/Type&amp;gt;      &lt;!-- 线性标注 --&gt;\n    &amp;lt;Value&amp;gt;20.5&amp;lt;/Value&amp;gt;    &lt;!-- 尺寸值 --&gt;\n    &amp;lt;Object1&amp;gt;Face.1&amp;lt;/Object1&amp;gt; &lt;!-- 标注对象1 --&gt;\n    &amp;lt;Object2&amp;gt;Face.2&amp;lt;/Object2&amp;gt; &lt;!-- 标注对象2 --&gt;\n    &amp;lt;Location&amp;gt; &lt;!-- 位置信息 --&gt;\n      &amp;lt;Box_X&amp;gt;120.0&amp;lt;/Box_X&amp;gt;\n      &amp;lt;Box_Y&amp;gt;85.0&amp;lt;/Box_Y&amp;gt;\n      &amp;lt;Ref_Line&amp;gt;Pitch_Line_3&amp;lt;/Ref_Line&amp;gt;\n    &amp;lt;/Location&amp;gt;\n  &lt;b&gt;&amp;lt;/Dimension&amp;gt;&lt;/b&gt;\n&lt;b&gt;&amp;lt;/AnnotationTemplate&amp;gt;&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="170" width="520" x="620" y="2596" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-61" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=13;fontFamily=PingFang SC;align=center;" value="&lt;b&gt;3. 标注规则与标准&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="540" x="610" y="2786" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-62" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=12;fontColor=#0d47a1;fontFamily=PingFang SC;" value="• GD&amp;T 标准 (ASME Y14.5)\n• ISO GPS 标准 (ISO 1101)\n• 企业标准标注规范\n• 图层/颜色映射规则" vertex="1">
+          <mxGeometry height="70" width="520" x="620" y="2832" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-63" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=13;fontFamily=PingFang SC;align=center;" value="&lt;b&gt;4. 智能体配置参数&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="540" x="610" y="2922" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-64" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=12;fontColor=#0d47a1;fontFamily=PingFang SC;" value="• 干涉检测阈值 (默认 1mm 步进)\n• 最大迭代调整次数 (默认 X 次)\n• 标注平面偏好 (前/后/侧/剖)\n• 批量处理规格列表" vertex="1">
+          <mxGeometry height="70" width="520" x="620" y="2968" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-65" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=3;dashed=1;entryX=0;entryY=0.5;exitX=1;exitY=0.5;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="450" as="source" />
+            <mxPoint x="680" y="450" as="target" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-66" parent="1" style="text;html=1;strokeColor=none;fillColor=#e8f5e9;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontColor=#1b5e20;fontFamily=PingFang SC;rounded=1;strokeWidth=1;strokeColor=#2e7d32;" value="&lt;b&gt;推理&lt;br&gt;引擎&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="60" x="1185" y="2699" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-67" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#2e7d32;strokeWidth=2;fontFamily=PingFang SC;opacity=20;" value="" vertex="1">
+          <mxGeometry height="740" width="600" x="1240" y="2354" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-68" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;fontSize=18;fontColor=#1b5e20;fontFamily=PingFang SC;" value="&lt;b&gt;📤 输出 Schema&lt;/b&gt;" vertex="1">
+          <mxGeometry height="32" width="200" x="1440" y="2364" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-69" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=13;fontFamily=PingFang SC;align=center;" value="&lt;b&gt;1. 3D PMI 标注模型&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="540" x="1270" y="2414" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-70" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=12;fontColor=#1b5e20;fontFamily=PingFang SC;" value="• 带 PMI 标注的 3D 模型\n• 标注类型: 尺寸/公差/粗糙度/文本\n• 标注与几何实体关联 (语义绑定)\n• FTA Module 兼容格式" vertex="1">
+          <mxGeometry height="70" width="520" x="1280" y="2460" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-71" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=13;fontFamily=PingFang SC;align=center;" value="&lt;b&gt;2. 二维工程图输出&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="540" x="1270" y="2550" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-72" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=12;fontColor=#1b5e20;fontFamily=PingFang SC;" value="• CATDrawing 工程图文件\n• 导出格式: PDF / DWG / DXF\n• 视图: 三视图 / 剖视图 / 局部视图\n• 图纸标准化: 标题栏/图框/技术条件" vertex="1">
+          <mxGeometry height="70" width="520" x="1280" y="2596" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-73" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=13;fontFamily=PingFang SC;align=center;" value="&lt;b&gt;3. 标注配置 XML (可复用)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="540" x="1270" y="2686" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-74" parent="1" style="text;html=1;strokeColor=none;fillColor=#e8f5e9;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=12;fontColor=#1b5e20;fontFamily=PingFang SC;rounded=1;strokeWidth=1;strokeColor=#388e3c;" value="&lt;font face=&quot;Courier New&quot; size=&quot;10&quot;&gt;&lt;b&gt;&amp;lt;AnnotationOutput&amp;gt;&lt;/b&gt;\n  &amp;lt;Model_ID&amp;gt;SW628_001&amp;lt;/Model_ID&amp;gt;\n  &amp;lt;View_Count&amp;gt;4&amp;lt;/View_Count&amp;gt;\n  &lt;b&gt;&amp;lt;DimensionList&amp;gt;&lt;/b&gt;\n    &amp;lt;Dimension ID=&quot;D001&quot; Type=&quot;DL&quot; /&gt;\n    &amp;lt;Dimension ID=&quot;D002&quot; Type=&quot;DR&quot; /&gt;\n  &lt;b&gt;&amp;lt;/DimensionList&amp;gt;&lt;/b&gt;\n  &amp;lt;ToleranceList&amp;gt;...&amp;lt;/ToleranceList&amp;gt;\n  &amp;lt;Layer_Mapping&amp;gt;...&amp;lt;/Layer_Mapping&amp;gt;\n&lt;b&gt;&amp;lt;/AnnotationOutput&amp;gt;&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="160" width="520" x="1280" y="2732" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-75" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=13;fontFamily=PingFang SC;align=center;" value="&lt;b&gt;4. 校验报告 &amp; 日志&lt;/b&gt;" vertex="1">
+          <mxGeometry height="36" width="540" x="1270" y="2912" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-76" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=12;fontColor=#1b5e20;fontFamily=PingFang SC;" value="• 标注完整性校验报告\n• 干涉检测结果 (位置/状态)\n• 错误预警与建议\n• 处理耗时与效率统计" vertex="1">
+          <mxGeometry height="70" width="520" x="1280" y="2958" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-77" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontFamily=PingFang SC;" value="" vertex="1">
+          <mxGeometry height="50" width="1260" x="580" y="3024" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-78" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontColor=#37474f;fontFamily=PingFang SC;" value="&lt;b&gt;📐 标注类型标识 (CATIA FTA)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="220" x="600" y="3039" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-79" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#1565c0;fontFamily=PingFang SC;" value="DL = 线性标注" vertex="1">
+          <mxGeometry height="20" width="150" x="840" y="3039" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-80" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#2e7d32;fontFamily=PingFang SC;" value="DA = 角度标注" vertex="1">
+          <mxGeometry height="20" width="150" x="1020" y="3039" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-81" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#e65100;fontFamily=PingFang SC;" value="DR = 半径标注" vertex="1">
+          <mxGeometry height="20" width="150" x="1200" y="3039" as="geometry" />
+        </mxCell>
+        <mxCell id="S4XG45Wahda2dK0s9bxt-82" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#6a1b9a;fontFamily=PingFang SC;" value="TXT = 文本/技术要求" vertex="1">
+          <mxGeometry height="20" width="180" x="1380" y="3039" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
