@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="功能分界图" id="WtTDr4I-gpoAqVCsRTHY">
-    <mxGraphModel dx="1283" dy="664" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1711" dy="885" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -104,6 +104,420 @@
         </mxCell>
         <mxCell id="DnOHc31jljWA_oqjQL_h-32" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontColor=#546e7a;fontFamily=PingFang SC;" value="③ 通过事件账本实现执行事实的统一记录与回放" vertex="1">
           <mxGeometry height="20" width="280" x="1140" y="1059" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=22;fontColor=#1a1a2e;fontFamily=PingFang SC;" value="&lt;b&gt;专业智能体与平台级智能体 · 技术栈架构总图&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="700" x="780" y="1600" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;strokeWidth=2;fontFamily=PingFang SC;opacity=20;" value="" vertex="1">
+          <mxGeometry height="760" width="380" x="520" y="1664" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;fontSize=16;fontColor=#0d47a1;fontFamily=PingFang SC;" value="&lt;b&gt;🖥️ 前端技术栈&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="180" x="620" y="1674" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=12;fontFamily=PingFang SC;" value="React 18 + TypeScript 5.8" vertex="1">
+          <mxGeometry height="36" width="320" x="550" y="1724" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=12;fontFamily=PingFang SC;" value="Rsbuild / Rush.js (Monorepo)" vertex="1">
+          <mxGeometry height="36" width="320" x="550" y="1779" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=12;fontFamily=PingFang SC;" value="Zustand 状态管理" vertex="1">
+          <mxGeometry height="36" width="320" x="550" y="1834" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=12;fontFamily=PingFang SC;" value="TailwindCSS / 暗色主题" vertex="1">
+          <mxGeometry height="36" width="320" x="550" y="1889" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=12;fontFamily=PingFang SC;" value="Mermaid / 图可视化" vertex="1">
+          <mxGeometry height="36" width="320" x="550" y="1944" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=12;fontFamily=PingFang SC;" value="Vercel AI SDK (SSE/WS)" vertex="1">
+          <mxGeometry height="36" width="320" x="550" y="1999" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;strokeWidth=2;fontFamily=PingFang SC;opacity=20;" value="" vertex="1">
+          <mxGeometry height="760" width="420" x="940" y="1664" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-11" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;fontSize=16;fontColor=#bf360c;fontFamily=PingFang SC;" value="&lt;b&gt;🏗️ 平台级 (Go 控制面)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="200" x="1050" y="1674" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=12;fontFamily=PingFang SC;" value="chi (HTTP路由)" vertex="1">
+          <mxGeometry height="36" width="360" x="970" y="1724" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=12;fontFamily=PingFang SC;" value="gRPC (跨面流式通信)" vertex="1">
+          <mxGeometry height="36" width="360" x="970" y="1779" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=12;fontFamily=PingFang SC;" value="pgx (PostgreSQL驱动)" vertex="1">
+          <mxGeometry height="36" width="360" x="970" y="1834" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=12;fontFamily=PingFang SC;" value="x/sync 信号量 (并发准入)" vertex="1">
+          <mxGeometry height="36" width="360" x="970" y="1889" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=12;fontFamily=PingFang SC;" value="Prometheus + OpenTelemetry" vertex="1">
+          <mxGeometry height="36" width="360" x="970" y="1944" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=12;fontFamily=PingFang SC;" value="AES-GCM + bcrypt (加密)" vertex="1">
+          <mxGeometry height="36" width="360" x="970" y="1999" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=12;fontFamily=PingFang SC;" value="MinIO 客户端" vertex="1">
+          <mxGeometry height="36" width="360" x="970" y="2054" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#2e7d32;strokeWidth=2;fontFamily=PingFang SC;opacity=20;" value="" vertex="1">
+          <mxGeometry height="760" width="420" x="1400" y="1664" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-20" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;fontSize=16;fontColor=#1b5e20;fontFamily=PingFang SC;" value="&lt;b&gt;🧠 专业智能体 (Python 认知面)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="240" x="1490" y="1674" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=12;fontFamily=PingFang SC;fontStyle=1;" value="LangGraph (图编排引擎)" vertex="1">
+          <mxGeometry height="36" width="360" x="1430" y="1724" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=12;fontFamily=PingFang SC;" value="LangChain (基础组件)" vertex="1">
+          <mxGeometry height="36" width="360" x="1430" y="1779" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=12;fontFamily=PingFang SC;" value="Checkpointer (PG持久化)" vertex="1">
+          <mxGeometry height="36" width="360" x="1430" y="1834" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-24" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=12;fontFamily=PingFang SC;" value="Send 扇出 (并行子任务)" vertex="1">
+          <mxGeometry height="36" width="360" x="1430" y="1889" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-25" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=12;fontFamily=PingFang SC;" value="工具注册表 (本地/MCP/Skill)" vertex="1">
+          <mxGeometry height="36" width="360" x="1430" y="1944" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-26" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=12;fontFamily=PingFang SC;" value="RAG 检索增强 (Qdrant)" vertex="1">
+          <mxGeometry height="36" width="360" x="1430" y="1999" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=12;fontFamily=PingFang SC;" value="MCP 协议支持" vertex="1">
+          <mxGeometry height="36" width="360" x="1430" y="2054" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-28" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1565c0;strokeWidth=2;dashed=1;fontColor=#1565c0;fontSize=11;fontFamily=PingFang SC;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="400" as="source" />
+            <mxPoint x="460" y="400" as="target" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-29" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#1565c0;fontFamily=PingFang SC;" value="HTTP/SSE" vertex="1">
+          <mxGeometry height="20" width="50" x="910" y="1969" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-30" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=2;dashed=1;fontColor=#e65100;fontSize=11;fontFamily=PingFang SC;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="880" y="400" as="source" />
+            <mxPoint x="920" y="400" as="target" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-31" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#e65100;fontFamily=PingFang SC;fontStyle=1;" value="gRPC" vertex="1">
+          <mxGeometry height="20" width="50" x="1370" y="1969" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-32" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bdbdbd;strokeWidth=1;fontFamily=PingFang SC;" value="" vertex="1">
+          <mxGeometry height="50" width="1300" x="520" y="2364" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-33" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=13;fontColor=#37474f;fontFamily=PingFang SC;" value="&lt;b&gt;技术栈分层&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="120" x="540" y="2379" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-34" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontColor=#0d47a1;fontFamily=PingFang SC;" value="🔵 前端技术" vertex="1">
+          <mxGeometry height="20" width="120" x="700" y="2379" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-35" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontColor=#bf360c;fontFamily=PingFang SC;" value="🟠 平台级智能体 (Go)" vertex="1">
+          <mxGeometry height="20" width="180" x="880" y="2379" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-36" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontColor=#1b5e20;fontFamily=PingFang SC;" value="🟢 专业智能体 (Python)" vertex="1">
+          <mxGeometry height="20" width="180" x="1100" y="2379" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-37" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontColor=#e65100;fontFamily=PingFang SC;" value="➡️ 通信协议" vertex="1">
+          <mxGeometry height="20" width="120" x="1320" y="2379" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-38" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=24;fontColor=#1a1a2e;fontFamily=PingFang SC;" value="&lt;b&gt;专业智能体与平台级智能体 全景架构图&lt;/b&gt;" vertex="1">
+          <mxGeometry height="44" width="700" x="1000" y="3560" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-39" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=13;fontColor=#78909c;fontFamily=PingFang SC;" value="Go 控制面 + Python 认知面 双平面 · 协议标准：AG-UI / MCP / A2A" vertex="1">
+          <mxGeometry height="24" width="600" x="1050" y="3602" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-40" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;strokeWidth=2;fontFamily=PingFang SC;opacity=25;" value="" vertex="1">
+          <mxGeometry height="90" width="1100" x="660" y="3644" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-41" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=15;fontColor=#0d47a1;fontFamily=PingFang SC;" value="&lt;b&gt;👤 用户交互层&lt;/b&gt;" vertex="1">
+          <mxGeometry height="24" width="160" x="680" y="3652" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-42" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=12;fontFamily=PingFang SC;" value="💬 对话界面" vertex="1">
+          <mxGeometry height="38" width="140" x="680" y="3686" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-43" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=12;fontFamily=PingFang SC;" value="📋 计划视图" vertex="1">
+          <mxGeometry height="38" width="140" x="850" y="3686" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-44" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=12;fontFamily=PingFang SC;" value="🕸️ 图可视化" vertex="1">
+          <mxGeometry height="38" width="140" x="1020" y="3686" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-45" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=12;fontFamily=PingFang SC;" value="✅ 审批卡" vertex="1">
+          <mxGeometry height="38" width="140" x="1190" y="3686" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-46" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=12;fontFamily=PingFang SC;" value="📚 知识库管理" vertex="1">
+          <mxGeometry height="38" width="140" x="1360" y="3686" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-47" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=12;fontFamily=PingFang SC;" value="⚙️ 管理后台" vertex="1">
+          <mxGeometry height="38" width="140" x="1530" y="3686" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-48" edge="1" parent="1" source="GGP467qeSzR2mgOXZSit-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#546e7a;strokeWidth=2;" target="GGP467qeSzR2mgOXZSit-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-49" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;strokeWidth=3;fontFamily=PingFang SC;opacity=25;" value="" vertex="1">
+          <mxGeometry height="150" width="1100" x="660" y="3764" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-50" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=16;fontColor=#bf360c;fontFamily=PingFang SC;" value="&lt;b&gt;🏗️ 平台级智能体 (Go 控制面) ⭐&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="300" x="680" y="3772" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-51" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=11;fontFamily=PingFang SC;align=center;" value="🔌 API 网关&lt;br&gt;鉴权/RBAC/限流" vertex="1">
+          <mxGeometry height="50" width="160" x="680" y="3814" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-52" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=11;fontFamily=PingFang SC;align=center;" value="📤 Dispatcher&lt;br&gt;并发信号量 · 生命周期" vertex="1">
+          <mxGeometry height="50" width="160" x="870" y="3814" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-53" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=11;fontFamily=PingFang SC;align=center;" value="📡 Streaming Hub&lt;br&gt;SSE/WS 推送" vertex="1">
+          <mxGeometry height="50" width="160" x="1060" y="3814" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-54" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=11;fontFamily=PingFang SC;align=center;" value="⏰ Scheduler/Poller&lt;br&gt;定时触发 · 事件轮询" vertex="1">
+          <mxGeometry height="50" width="160" x="1250" y="3814" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-55" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe0b2;strokeColor=#e65100;fontColor=#bf360c;fontSize=11;fontFamily=PingFang SC;align=center;" value="📊 可观测性&lt;br&gt;Prometheus/OTel" vertex="1">
+          <mxGeometry height="50" width="160" x="1440" y="3814" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-56" edge="1" parent="1" source="GGP467qeSzR2mgOXZSit-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#546e7a;strokeWidth=2;" target="GGP467qeSzR2mgOXZSit-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-57" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#2e7d32;strokeWidth=3;fontFamily=PingFang SC;opacity=25;" value="" vertex="1">
+          <mxGeometry height="160" width="1100" x="660" y="3944" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-58" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=16;fontColor=#1b5e20;fontFamily=PingFang SC;" value="&lt;b&gt;🧠 专业智能体集群 (Python 认知面) ⭐&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="340" x="680" y="3952" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-59" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;fontStyle=1;align=center;" value="🔄 LangGraph 编排引擎&lt;br&gt;状态图 · Checkpoint · Send扇出" vertex="1">
+          <mxGeometry height="50" width="200" x="680" y="3994" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-60" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a5d6a7;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;align=center;" value="⚡ ReAct 图" vertex="1">
+          <mxGeometry height="40" width="120" x="910" y="3994" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-61" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a5d6a7;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;align=center;" value="📋 Plan-Execute 图" vertex="1">
+          <mxGeometry height="40" width="130" x="1060" y="3994" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-62" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a5d6a7;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;align=center;" value="🔍 Agentic RAG 子图" vertex="1">
+          <mxGeometry height="40" width="140" x="1220" y="3994" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-63" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#81c784;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;" value="🔍 搜索专家" vertex="1">
+          <mxGeometry height="38" width="120" x="910" y="4049" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-64" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#81c784;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;" value="💻 代码专家" vertex="1">
+          <mxGeometry height="38" width="120" x="1060" y="4049" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-65" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#81c784;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;" value="📊 分析专家" vertex="1">
+          <mxGeometry height="38" width="120" x="1210" y="4049" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-66" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;align=center;" value="🔧 工具注册表&lt;br&gt;本地/MCP/Skill" vertex="1">
+          <mxGeometry height="50" width="160" x="1400" y="3994" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-67" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;align=center;" value="🧠 记忆管理&lt;br&gt;Checkpointer · 向量记忆" vertex="1">
+          <mxGeometry height="50" width="160" x="1590" y="3994" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-68" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontColor=#e65100;fontFamily=PingFang SC;fontStyle=1;" value="&lt;b&gt;gRPC 流式通信&lt;/b&gt;" vertex="1">
+          <mxGeometry height="20" width="160" x="1060" y="3929" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-69" edge="1" parent="1" source="GGP467qeSzR2mgOXZSit-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#546e7a;strokeWidth=2;" target="GGP467qeSzR2mgOXZSit-70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-70" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#6a1b9a;strokeWidth=2;fontFamily=PingFang SC;opacity=25;" value="" vertex="1">
+          <mxGeometry height="90" width="1100" x="660" y="4134" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-71" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=15;fontColor=#4a148c;fontFamily=PingFang SC;" value="&lt;b&gt;🔌 协议与集成层&lt;/b&gt;" vertex="1">
+          <mxGeometry height="24" width="180" x="680" y="4142" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-72" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#6a1b9a;fontColor=#4a148c;fontSize=11;fontFamily=PingFang SC;" value="📡 AG-UI (前端交互)" vertex="1">
+          <mxGeometry height="38" width="180" x="680" y="4179" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-73" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#6a1b9a;fontColor=#4a148c;fontSize=11;fontFamily=PingFang SC;" value="🔗 MCP (工具连接标准)" vertex="1">
+          <mxGeometry height="38" width="180" x="890" y="4179" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-74" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#6a1b9a;fontColor=#4a148c;fontSize=11;fontFamily=PingFang SC;" value="🤝 A2A (Agent间通信)" vertex="1">
+          <mxGeometry height="38" width="180" x="1100" y="4179" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-75" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#6a1b9a;fontColor=#4a148c;fontSize=11;fontFamily=PingFang SC;" value="🌐 HTTP/REST API" vertex="1">
+          <mxGeometry height="38" width="180" x="1310" y="4179" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-76" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#6a1b9a;fontColor=#4a148c;fontSize=11;fontFamily=PingFang SC;" value="📨 事件驱动总线" vertex="1">
+          <mxGeometry height="38" width="180" x="1520" y="4179" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-77" edge="1" parent="1" source="GGP467qeSzR2mgOXZSit-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#546e7a;strokeWidth=2;" target="GGP467qeSzR2mgOXZSit-78">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-78" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eceff1;strokeColor=#546e7a;strokeWidth=2;fontFamily=PingFang SC;opacity=20;" value="" vertex="1">
+          <mxGeometry height="80" width="1100" x="660" y="4254" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-79" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=15;fontColor=#37474f;fontFamily=PingFang SC;" value="&lt;b&gt;⚙️ 基础设施层&lt;/b&gt;" vertex="1">
+          <mxGeometry height="24" width="160" x="680" y="4262" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-80" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#546e7a;fontColor=#37474f;fontSize=11;fontFamily=PingFang SC;" value="🐘 PostgreSQL" vertex="1">
+          <mxGeometry height="32" width="140" x="680" y="4289" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-81" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#546e7a;fontColor=#37474f;fontSize=11;fontFamily=PingFang SC;" value="📊 Qdrant 向量库" vertex="1">
+          <mxGeometry height="32" width="140" x="850" y="4289" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-82" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#546e7a;fontColor=#37474f;fontSize=11;fontFamily=PingFang SC;" value="📦 MinIO 对象存储" vertex="1">
+          <mxGeometry height="32" width="140" x="1020" y="4289" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-83" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#546e7a;fontColor=#37474f;fontSize=11;fontFamily=PingFang SC;" value="⚡ Redis 缓存" vertex="1">
+          <mxGeometry height="32" width="140" x="1190" y="4289" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-84" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#546e7a;fontColor=#37474f;fontSize=11;fontFamily=PingFang SC;" value="📨 NATS 消息队列" vertex="1">
+          <mxGeometry height="32" width="140" x="1360" y="4289" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-85" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfd8dc;strokeColor=#546e7a;fontColor=#37474f;fontSize=11;fontFamily=PingFang SC;" value="🧠 LLM 推理集群" vertex="1">
+          <mxGeometry height="32" width="140" x="1530" y="4289" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-86" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#c62828;strokeWidth=2;fontFamily=PingFang SC;opacity=25;dashed=1;" value="" vertex="1">
+          <mxGeometry height="690" width="240" x="1790" y="3644" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-87" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;fontSize=15;fontColor=#b71c1c;fontFamily=PingFang SC;" value="&lt;b&gt;📐 协议标准栈&lt;/b&gt;" vertex="1">
+          <mxGeometry height="28" width="180" x="1820" y="3654" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-88" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcdd2;strokeColor=#c62828;fontColor=#b71c1c;fontSize=11;fontFamily=PingFang SC;align=center;" value="&lt;b&gt;AG-UI&lt;/b&gt; [citation:4]&lt;br&gt;前端↔Agent通信&lt;br&gt;16种标准事件" vertex="1">
+          <mxGeometry height="55" width="200" x="1810" y="3699" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-89" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcdd2;strokeColor=#c62828;fontColor=#b71c1c;fontSize=11;fontFamily=PingFang SC;align=center;" value="&lt;b&gt;MCP&lt;/b&gt; [citation:4]&lt;br&gt;模型↔工具连接&lt;br&gt;stdio / SSE / HTTP" vertex="1">
+          <mxGeometry height="55" width="200" x="1810" y="3779" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-90" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcdd2;strokeColor=#c62828;fontColor=#b71c1c;fontSize=11;fontFamily=PingFang SC;align=center;" value="&lt;b&gt;A2A&lt;/b&gt; [citation:4]&lt;br&gt;Agent↔Agent通信&lt;br&gt;能力发现/任务协商" vertex="1">
+          <mxGeometry height="55" width="200" x="1810" y="3859" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-91" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcdd2;strokeColor=#c62828;fontColor=#b71c1c;fontSize=11;fontFamily=PingFang SC;align=center;" value="&lt;b&gt;事件账本模型&lt;/b&gt;[citation:2]&lt;br&gt;实时与回放同构&lt;br&gt;不靠重跑·靠事件重放" vertex="1">
+          <mxGeometry height="55" width="200" x="1810" y="3939" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-92" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcdd2;strokeColor=#c62828;fontColor=#b71c1c;fontSize=11;fontFamily=PingFang SC;align=center;" value="&lt;b&gt;HITL 人机协同&lt;/b&gt;[citation:2]&lt;br&gt;审批=run边界&lt;br&gt;高危工具前置审批" vertex="1">
+          <mxGeometry height="55" width="200" x="1810" y="4019" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-93" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcdd2;strokeColor=#c62828;fontColor=#b71c1c;fontSize=11;fontFamily=PingFang SC;align=center;" value="&lt;b&gt;三级并发控制&lt;/b&gt;[citation:2]&lt;br&gt;请求级·任务级·工具级&lt;br&gt;背压与归属控制" vertex="1">
+          <mxGeometry height="55" width="200" x="1810" y="4099" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-122" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=22;fontColor=#1a1a2e;fontFamily=PingFang SC;" value="&lt;b&gt;专业智能体 ↔ 平台级智能体 交互时序图&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="600" x="1230" y="4670" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-123" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1565c0;fontColor=#0d47a1;fontSize=14;fontFamily=PingFang SC;" value="&lt;b&gt;👤 用户/前端&lt;/b&gt;" vertex="1">
+          <mxGeometry height="50" width="140" x="990" y="4730" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-124" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;fontColor=#bf360c;fontSize=13;fontFamily=PingFang SC;" value="&lt;b&gt;🏗️ 平台级智能体&lt;/b&gt;&lt;br&gt;(Go 控制面)" vertex="1">
+          <mxGeometry height="50" width="160" x="1270" y="4730" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-125" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=13;fontFamily=PingFang SC;" value="&lt;b&gt;🧠 专业智能体&lt;/b&gt;&lt;br&gt;(Python 认知面)" vertex="1">
+          <mxGeometry height="50" width="160" x="1570" y="4730" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-126" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#6a1b9a;fontColor=#4a148c;fontSize=13;fontFamily=PingFang SC;" value="&lt;b&gt;🗄️ 事件账本&lt;/b&gt;&lt;br&gt;(PG/Redis)" vertex="1">
+          <mxGeometry height="50" width="160" x="1870" y="4730" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-127" edge="1" parent="1" source="GGP467qeSzR2mgOXZSit-123" style="edgeStyle=none;rounded=0;html=1;strokeColor=#1565c0;strokeWidth=1;dashed=1;entryX=0.5;entryY=0;exitX=0.5;exitY=0;" target="GGP467qeSzR2mgOXZSit-123">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="130" as="source" />
+            <mxPoint x="130" y="820" as="target" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-128" edge="1" parent="1" source="GGP467qeSzR2mgOXZSit-124" style="edgeStyle=none;rounded=0;html=1;strokeColor=#e65100;strokeWidth=1;dashed=1;" target="GGP467qeSzR2mgOXZSit-124">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="130" as="source" />
+            <mxPoint x="420" y="820" as="target" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-129" edge="1" parent="1" source="GGP467qeSzR2mgOXZSit-125" style="edgeStyle=none;rounded=0;html=1;strokeColor=#2e7d32;strokeWidth=1;dashed=1;" target="GGP467qeSzR2mgOXZSit-125">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720" y="130" as="source" />
+            <mxPoint x="720" y="820" as="target" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-130" edge="1" parent="1" source="GGP467qeSzR2mgOXZSit-126" style="edgeStyle=none;rounded=0;html=1;strokeColor=#6a1b9a;strokeWidth=1;dashed=1;" target="GGP467qeSzR2mgOXZSit-126">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1020" y="130" as="source" />
+            <mxPoint x="1020" y="820" as="target" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-131" edge="1" parent="1" source="GGP467qeSzR2mgOXZSit-127" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1565c0;strokeWidth=2;fontColor=#1565c0;fontSize=11;fontFamily=PingFang SC;" target="GGP467qeSzR2mgOXZSit-128" value="1. POST /runs (任务请求)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="160" as="source" />
+            <mxPoint x="420" y="160" as="target" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-132" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff8e1;strokeColor=#e65100;fontColor=#bf360c;fontSize=11;fontFamily=PingFang SC;align=center;" value="&lt;b&gt;鉴权 · 会话归属 · 并发配额&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="240" x="1230" y="4830" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-133" edge="1" parent="1" source="GGP467qeSzR2mgOXZSit-128" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=2;fontColor=#e65100;fontSize=11;fontFamily=PingFang SC;" target="GGP467qeSzR2mgOXZSit-129" value="2. gRPC 流式 RunRequest">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="240" as="source" />
+            <mxPoint x="720" y="240" as="target" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-134" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#2e7d32;fontColor=#1b5e20;fontSize=11;fontFamily=PingFang SC;align=center;" value="&lt;b&gt;3. 图编排执行&lt;/b&gt; (ReAct/Plan-Execute)&lt;br&gt;每步 checkpoint 可恢复" vertex="1">
+          <mxGeometry height="35" width="200" x="1550" y="4930" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-135" edge="1" parent="1" source="GGP467qeSzR2mgOXZSit-129" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=2;fontColor=#2e7d32;fontSize=11;fontFamily=PingFang SC;dashed=1;" target="GGP467qeSzR2mgOXZSit-128" value="4. astream_events 逐事件推送">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720" y="340" as="source" />
+            <mxPoint x="420" y="340" as="target" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-136" edge="1" parent="1" source="GGP467qeSzR2mgOXZSit-128" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=2;fontColor=#e65100;fontSize=11;fontFamily=PingFang SC;" target="GGP467qeSzR2mgOXZSit-130" value="5. 先落库 (事实账本)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="380" as="source" />
+            <mxPoint x="1020" y="380" as="target" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-137" edge="1" parent="1" source="GGP467qeSzR2mgOXZSit-128" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1565c0;strokeWidth=2;fontColor=#1565c0;fontSize=11;fontFamily=PingFang SC;dashed=1;" target="GGP467qeSzR2mgOXZSit-127" value="6. SSE 推送实时事件">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="420" as="source" />
+            <mxPoint x="130" y="420" as="target" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-138" edge="1" parent="1" source="GGP467qeSzR2mgOXZSit-129" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d32f2f;strokeWidth=2;fontColor=#d32f2f;fontSize=11;fontFamily=PingFang SC;dashed=1;" target="GGP467qeSzR2mgOXZSit-128" value="7. 🔴 高危工具执行 → HITL 挂起">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720" y="480" as="source" />
+            <mxPoint x="420" y="480" as="target" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-139" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffebee;strokeColor=#d32f2f;fontColor=#b71c1c;fontSize=11;fontFamily=PingFang SC;align=center;" value="&lt;b&gt;人工审批卡&lt;/b&gt; (跨刷新/隔夜可批)" vertex="1">
+          <mxGeometry height="30" width="240" x="1230" y="5160" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-140" edge="1" parent="1" source="GGP467qeSzR2mgOXZSit-127" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1565c0;strokeWidth=2;fontColor=#1565c0;fontSize=11;fontFamily=PingFang SC;" target="GGP467qeSzR2mgOXZSit-128" value="8. 用户审批 → 恢复 run">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="570" as="source" />
+            <mxPoint x="420" y="570" as="target" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-141" edge="1" parent="1" source="GGP467qeSzR2mgOXZSit-128" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;strokeWidth=2;fontColor=#e65100;fontSize=11;fontFamily=PingFang SC;" target="GGP467qeSzR2mgOXZSit-129" value="9. 从 checkpoint 恢复执行">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="610" as="source" />
+            <mxPoint x="720" y="610" as="target" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-142" edge="1" parent="1" source="GGP467qeSzR2mgOXZSit-129" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2e7d32;strokeWidth=2;fontColor=#2e7d32;fontSize=11;fontFamily=PingFang SC;dashed=1;" target="GGP467qeSzR2mgOXZSit-128" value="10. 最终结果">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720" y="660" as="source" />
+            <mxPoint x="420" y="660" as="target" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-143" edge="1" parent="1" source="GGP467qeSzR2mgOXZSit-128" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6a1b9a;strokeWidth=2;fontColor=#6a1b9a;fontSize=11;fontFamily=PingFang SC;" target="GGP467qeSzR2mgOXZSit-130" value="11. 落库+SSE推送">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="700" as="source" />
+            <mxPoint x="1020" y="700" as="target" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-144" edge="1" parent="1" source="GGP467qeSzR2mgOXZSit-128" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1565c0;strokeWidth=2;fontColor=#1565c0;fontSize=11;fontFamily=PingFang SC;" target="GGP467qeSzR2mgOXZSit-127" value="12. 最终响应">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="740" as="source" />
+            <mxPoint x="130" y="740" as="target" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-145" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#9e9e9e;strokeWidth=1;fontFamily=PingFang SC;" value="" vertex="1">
+          <mxGeometry height="40" width="1060" x="990" y="5450" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-146" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#1565c0;fontFamily=PingFang SC;" value="➡️ 同步请求" vertex="1">
+          <mxGeometry height="20" width="120" x="1010" y="5460" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-147" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#2e7d32;fontFamily=PingFang SC;" value="➡️ 异步流式 (SSE/gRPC)" vertex="1">
+          <mxGeometry height="20" width="150" x="1180" y="5460" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-148" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#d32f2f;fontFamily=PingFang SC;" value="⏸️ HITL 挂起" vertex="1">
+          <mxGeometry height="20" width="120" x="1380" y="5460" as="geometry" />
+        </mxCell>
+        <mxCell id="GGP467qeSzR2mgOXZSit-149" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=11;fontColor=#6a1b9a;fontFamily=PingFang SC;" value="🔄 回放与实时同构 (GET /runs/{id}/events)" vertex="1">
+          <mxGeometry height="20" width="300" x="1550" y="5460" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
