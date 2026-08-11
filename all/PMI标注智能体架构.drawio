@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" pages="2">
+<mxfile host="app.diagrams.net" pages="3">
   <diagram name="PMI标注智能体-AgentScope‑Java2.0架构（优化版）" id="aSYnbbjEfKhLJmYiezGB">
     <mxGraphModel dx="2566" dy="1442" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -618,6 +618,792 @@
                 <mxPoint x="1849" y="474" />
                 <mxPoint x="1849" y="509" />
                 <mxPoint x="1849" y="543" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="AroqlqViAWTBXR28yrJN" name="第 3 页">
+    <mxGraphModel dx="2851" dy="1602" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" mermaidData="{&#xa;  &quot;data&quot;: &quot;flowchart TD\n    START([📥 导入CAD模型]) --&gt; FEATURE[🔍 特征识别模块&lt;br/&gt;FeatureRecognition]\n    \n    FEATURE --&gt; DECOMPOSE{🎯 主控智能体&lt;br/&gt;任务分解}\n    \n    DECOMPOSE --&gt; |并行分支1| VIEW[📐 视图分析&lt;br/&gt;ViewAnalysisAgent]\n    DECOMPOSE --&gt; |并行分支2| DIM[📏 尺寸分析&lt;br/&gt;DimensionAgent]\n    DECOMPOSE --&gt; |并行分支3| TOL[⚙️ 公差分析&lt;br/&gt;ToleranceAgent]\n    DECOMPOSE --&gt; |并行分支4| SURF[🔍 表面分析&lt;br/&gt;SurfaceAgent]\n    \n    VIEW --&gt; VIEW_DETAIL{视图策略}\n    VIEW_DETAIL --&gt; |主视图| MVIEW[主视图生成]\n    VIEW_DETAIL --&gt; |投影| PROJ[投影视图]\n    VIEW_DETAIL --&gt; |剖视| SECT[剖视图]\n    VIEW_DETAIL --&gt; |局部| DETAIL[局部放大]\n    \n    DIM --&gt; DIM_DETAIL{尺寸策略}\n    DIM_DETAIL --&gt; |线性| LINEAR[线性尺寸标注]\n    DIM_DETAIL --&gt; |角度| ANGULAR[角度标注]\n    DIM_DETAIL --&gt; |径向| RADIAL[直径/半径]\n    DIM_DETAIL --&gt; |基准| DATUM[基准要素]\n    \n    TOL --&gt; TOL_DETAIL{公差策略}\n    TOL_DETAIL --&gt; |尺寸公差| SIZETOL[H7/g6匹配]\n    TOL_DETAIL --&gt; |形位公差| GDTOL[GD&amp;T符号]\n    TOL_DETAIL --&gt; |位置公差| POSTOL[位置度]\n    TOL_DETAIL --&gt; |原则| PRINCIPLE[MMC/LMC]\n    \n    SURF --&gt; SURF_DETAIL{表面策略}\n    SURF_DETAIL --&gt; |粗糙度| ROUGH[Ra标注]\n    SURF_DETAIL --&gt; |焊接| WELD[焊缝符号]\n    SURF_DETAIL --&gt; |注释| NOTE[技术要求]\n    \n    MVIEW &amp; PROJ &amp; SECT &amp; DETAIL --&gt; MERGE1[视图集成]\n    LINEAR &amp; ANGULAR &amp; RADIAL &amp; DATUM --&gt; MERGE2[尺寸集成]\n    SIZETOL &amp; GDTOL &amp; POSTOL &amp; PRINCIPLE --&gt; MERGE3[公差集成]\n    ROUGH &amp; WELD &amp; NOTE --&gt; MERGE4[表面集成]\n    \n    MERGE1 &amp; MERGE2 &amp; MERGE3 &amp; MERGE4 --&gt; AGGREGATE[🔄 PMI聚合器&lt;br/&gt;标注整合]\n    \n    AGGREGATE --&gt; VALIDATE{✅ 校验智能体&lt;br/&gt;PMIChecker}\n    \n    VALIDATE --&gt; |规则检查| RULES[📋 标准符合性&lt;br/&gt;ASME Y14.5 / ISO 1101 / GB/T 1182]\n    VALIDATE --&gt; |完整性| COMPLETE[📊 标注完整性&lt;br/&gt;缺失检查]\n    VALIDATE --&gt; |干涉| INTERFERE[⚠️ 干涉检查&lt;br/&gt;标注重叠]\n    \n    RULES &amp; COMPLETE &amp; INTERFERE --&gt; ISSUES{发现问题?}\n    \n    ISSUES --&gt; |有| FIX[🔧 自动修正&lt;br/&gt;+人工审核]\n    ISSUES --&gt; |无| PUBLISH[📤 标注发布]\n    \n    FIX --&gt; VALIDATE\n    \n    PUBLISH --&gt; FORMAT{输出格式}\n    FORMAT --&gt; |STEP AP242| STEP[STEP格式&lt;br/&gt;含PMI信息]\n    FORMAT --&gt; |JT| JT[JT格式&lt;br/&gt;轻量化]\n    FORMAT --&gt; |Native| NATIVE[CAD原生&lt;br/&gt;嵌入模型]\n    FORMAT --&gt; |3D PDF| PDF[3D PDF&lt;br/&gt;审阅]\n    \n    STEP &amp; JT &amp; NATIVE &amp; PDF --&gt; END([📦 发布完成])\n    \n    style DECOMPOSE fill:#ffcdd2,stroke:#c62828\n    style VALIDATE fill:#c8e6c9,stroke:#2e7d32\n    style AGGREGATE fill:#fff9c4,stroke:#f9a825\n    style PUBLISH fill:#b3e5fc,stroke:#0277bd&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="BTFGSoNFcPAp8HPmbgpN-2">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="📥 导入CAD模型" mermaidId="n:START" mermaidBaseStyle="html=1;rounded=1;whiteSpace=wrap;arcSize=50;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="📥 导入CAD模型" id="BTFGSoNFcPAp8HPmbgpN-3">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;rounded=1;whiteSpace=wrap;arcSize=50;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="39" width="144" x="970" y="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="🔍 特征识别模块&#xa;FeatureRecognition" mermaidId="n:FEATURE" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="🔍 特征识别模块&#xa;FeatureRecognition" id="BTFGSoNFcPAp8HPmbgpN-4">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="199" x="942" y="119" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="🎯 主控智能体&#xa;任务分解" mermaidId="n:DECOMPOSE" mermaidBaseStyle="rhombus;html=1;strokeWidth=1;whiteSpace=wrap;fillColor=#ffcdd2;strokeColor=#c62828;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="🎯 主控智能体&#xa;任务分解" id="BTFGSoNFcPAp8HPmbgpN-5">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="rhombus;html=1;strokeWidth=1;whiteSpace=wrap;fillColor=#ffcdd2;strokeColor=#c62828;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="187" width="187" x="948" y="242" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="📐 视图分析&#xa;ViewAnalysisAgent" mermaidId="n:VIEW" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="📐 视图分析&#xa;ViewAnalysisAgent" id="BTFGSoNFcPAp8HPmbgpN-6">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="192" x="2085" y="498" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="📏 尺寸分析&#xa;DimensionAgent" mermaidId="n:DIM" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="📏 尺寸分析&#xa;DimensionAgent" id="BTFGSoNFcPAp8HPmbgpN-7">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="175" x="1364" y="498" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="⚙️ 公差分析&#xa;ToleranceAgent" mermaidId="n:TOL" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="⚙️ 公差分析&#xa;ToleranceAgent" id="BTFGSoNFcPAp8HPmbgpN-8">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="171" x="657" y="498" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="🔍 表面分析&#xa;SurfaceAgent" mermaidId="n:SURF" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="🔍 表面分析&#xa;SurfaceAgent" id="BTFGSoNFcPAp8HPmbgpN-9">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="155" x="157" y="498" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="视图策略" mermaidId="n:VIEW_DETAIL" mermaidBaseStyle="rhombus;html=1;strokeWidth=1;whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="视图策略" id="BTFGSoNFcPAp8HPmbgpN-10">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="rhombus;html=1;strokeWidth=1;whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="118" width="118" x="2122" y="621" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="主视图生成" mermaidId="n:MVIEW" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="主视图生成" id="BTFGSoNFcPAp8HPmbgpN-11">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="140" x="2487" y="809" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="投影视图" mermaidId="n:PROJ" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="投影视图" id="BTFGSoNFcPAp8HPmbgpN-12">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="124" x="2313" y="809" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="剖视图" mermaidId="n:SECT" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="剖视图" id="BTFGSoNFcPAp8HPmbgpN-13">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="108" x="2155" y="809" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="局部放大" mermaidId="n:DETAIL" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="局部放大" id="BTFGSoNFcPAp8HPmbgpN-14">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="124" x="1981" y="809" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="尺寸策略" mermaidId="n:DIM_DETAIL" mermaidBaseStyle="rhombus;html=1;strokeWidth=1;whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="尺寸策略" id="BTFGSoNFcPAp8HPmbgpN-15">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="rhombus;html=1;strokeWidth=1;whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="118" width="118" x="1392" y="621" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="线性尺寸标注" mermaidId="n:LINEAR" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="线性尺寸标注" id="BTFGSoNFcPAp8HPmbgpN-16">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="156" x="1775" y="809" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="角度标注" mermaidId="n:ANGULAR" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="角度标注" id="BTFGSoNFcPAp8HPmbgpN-17">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="124" x="1601" y="809" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="直径/半径" mermaidId="n:RADIAL" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="直径/半径" id="BTFGSoNFcPAp8HPmbgpN-18">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="132" x="1419" y="809" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="基准要素" mermaidId="n:DATUM" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="基准要素" id="BTFGSoNFcPAp8HPmbgpN-19">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="124" x="1245" y="809" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="公差策略" mermaidId="n:TOL_DETAIL" mermaidBaseStyle="rhombus;html=1;strokeWidth=1;whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="公差策略" id="BTFGSoNFcPAp8HPmbgpN-20">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="rhombus;html=1;strokeWidth=1;whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="118" width="118" x="684" y="621" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="H7/g6匹配" mermaidId="n:SIZETOL" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="H7/g6匹配" id="BTFGSoNFcPAp8HPmbgpN-21">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="136" x="1059" y="809" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="GD&amp;T符号" mermaidId="n:GDTOL" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="GD&amp;T符号" id="BTFGSoNFcPAp8HPmbgpN-22">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="133" x="876" y="809" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="位置度" mermaidId="n:POSTOL" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="位置度" id="BTFGSoNFcPAp8HPmbgpN-23">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="108" x="718" y="809" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="MMC/LMC" mermaidId="n:PRINCIPLE" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="MMC/LMC" id="BTFGSoNFcPAp8HPmbgpN-24">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="130" x="538" y="809" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="表面策略" mermaidId="n:SURF_DETAIL" mermaidBaseStyle="rhombus;html=1;strokeWidth=1;whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="表面策略" id="BTFGSoNFcPAp8HPmbgpN-25">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="rhombus;html=1;strokeWidth=1;whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="118" width="118" x="175" y="621" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Ra标注" mermaidId="n:ROUGH" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Ra标注" id="BTFGSoNFcPAp8HPmbgpN-26">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="110" x="378" y="809" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="焊缝符号" mermaidId="n:WELD" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="焊缝符号" id="BTFGSoNFcPAp8HPmbgpN-27">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="124" x="204" y="809" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="技术要求" mermaidId="n:NOTE" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="技术要求" id="BTFGSoNFcPAp8HPmbgpN-28">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="124" x="30" y="809" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="视图集成" mermaidId="n:MERGE1" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="视图集成" id="BTFGSoNFcPAp8HPmbgpN-29">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="124" x="2119" y="913" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="尺寸集成" mermaidId="n:MERGE2" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="尺寸集成" id="BTFGSoNFcPAp8HPmbgpN-30">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="124" x="1389" y="913" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="公差集成" mermaidId="n:MERGE3" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="公差集成" id="BTFGSoNFcPAp8HPmbgpN-31">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="124" x="681" y="913" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="表面集成" mermaidId="n:MERGE4" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="表面集成" id="BTFGSoNFcPAp8HPmbgpN-32">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="124" x="172" y="913" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="🔄 PMI聚合器&#xa;标注整合" mermaidId="n:AGGREGATE" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=#fff9c4;strokeColor=#f9a825;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="🔄 PMI聚合器&#xa;标注整合" id="BTFGSoNFcPAp8HPmbgpN-33">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=#fff9c4;strokeColor=#f9a825;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="160" x="1138" y="1017" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="✅ 校验智能体&#xa;PMIChecker" mermaidId="n:VALIDATE" mermaidBaseStyle="rhombus;html=1;strokeWidth=1;whiteSpace=wrap;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="✅ 校验智能体&#xa;PMIChecker" id="BTFGSoNFcPAp8HPmbgpN-34">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="rhombus;html=1;strokeWidth=1;whiteSpace=wrap;fillColor=#c8e6c9;strokeColor=#2e7d32;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="187" width="187" x="1124" y="1140" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="📋 标准符合性&#xa;ASME Y14.5 / ISO 1101 / GB/T 1182" mermaidId="n:RULES" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="📋 标准符合性&#xa;ASME Y14.5 / ISO 1101 / GB/T 1182" id="BTFGSoNFcPAp8HPmbgpN-35">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="315" x="1365" y="1396" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="📊 标注完整性&#xa;缺失检查" mermaidId="n:COMPLETE" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="📊 标注完整性&#xa;缺失检查" id="BTFGSoNFcPAp8HPmbgpN-36">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="167" x="1148" y="1396" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="⚠️ 干涉检查&#xa;标注重叠" mermaidId="n:INTERFERE" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="⚠️ 干涉检查&#xa;标注重叠" id="BTFGSoNFcPAp8HPmbgpN-37">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="151" x="947" y="1396" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="发现问题?" mermaidId="n:ISSUES" mermaidBaseStyle="rhombus;html=1;strokeWidth=1;whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="发现问题?" id="BTFGSoNFcPAp8HPmbgpN-38">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="rhombus;html=1;strokeWidth=1;whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="128" width="128" x="1168" y="1519" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="🔧 自动修正&#xa;+人工审核" mermaidId="n:FIX" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="🔧 自动修正&#xa;+人工审核" id="BTFGSoNFcPAp8HPmbgpN-39">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="151" x="851" y="1716" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="📤 标注发布" mermaidId="n:PUBLISH" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=#b3e5fc;strokeColor=#0277bd;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="📤 标注发布" id="BTFGSoNFcPAp8HPmbgpN-40">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=#b3e5fc;strokeColor=#0277bd;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="54" width="151" x="1174" y="1725" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="输出格式" mermaidId="n:FORMAT" mermaidBaseStyle="rhombus;html=1;strokeWidth=1;whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="输出格式" id="BTFGSoNFcPAp8HPmbgpN-41">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="rhombus;html=1;strokeWidth=1;whiteSpace=wrap;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="118" width="118" x="1191" y="1839" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="STEP格式&#xa;含PMI信息" mermaidId="n:STEP" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="STEP格式&#xa;含PMI信息" id="BTFGSoNFcPAp8HPmbgpN-42">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="133" x="1436" y="2026" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="JT格式&#xa;轻量化" mermaidId="n:JT" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="JT格式&#xa;轻量化" id="BTFGSoNFcPAp8HPmbgpN-43">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="109" x="1277" y="2026" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="CAD原生&#xa;嵌入模型" mermaidId="n:NATIVE" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="CAD原生&#xa;嵌入模型" id="BTFGSoNFcPAp8HPmbgpN-44">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="124" x="1103" y="2026" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="3D PDF&#xa;审阅" mermaidId="n:PDF" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="3D PDF&#xa;审阅" id="BTFGSoNFcPAp8HPmbgpN-45">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="110" x="943" y="2026" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="📦 发布完成" mermaidId="n:END" mermaidBaseStyle="html=1;rounded=1;whiteSpace=wrap;arcSize=50;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="📦 发布完成" id="BTFGSoNFcPAp8HPmbgpN-46">
+          <mxCell parent="BTFGSoNFcPAp8HPmbgpN-2" style="html=1;rounded=1;whiteSpace=wrap;arcSize=50;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="39" width="115" x="1190" y="2149" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:START-&gt;FEATURE#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-47">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-3" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-4">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:FEATURE-&gt;DECOMPOSE#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-48">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-4" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-5">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="并行分支1" mermaidId="e:DECOMPOSE-&gt;VIEW#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.56;entryX=0.5;entryY=0;" mermaidBaseValue="并行分支1" id="BTFGSoNFcPAp8HPmbgpN-49">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-5" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.56;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-6">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="2181" y="464" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="并行分支2" mermaidId="e:DECOMPOSE-&gt;DIM#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.66;entryX=0.5;entryY=0;" mermaidBaseValue="并行分支2" id="BTFGSoNFcPAp8HPmbgpN-50">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-5" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.66;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-7">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1451" y="464" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="并行分支3" mermaidId="e:DECOMPOSE-&gt;TOL#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.72;entryX=0.5;entryY=0;" mermaidBaseValue="并行分支3" id="BTFGSoNFcPAp8HPmbgpN-51">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-5" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.72;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-8">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="743" y="464" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="并行分支4" mermaidId="e:DECOMPOSE-&gt;SURF#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.58;entryX=0.5;entryY=0;" mermaidBaseValue="并行分支4" id="BTFGSoNFcPAp8HPmbgpN-52">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-5" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.58;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-9">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="234" y="464" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:VIEW-&gt;VIEW_DETAIL#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-53">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-6" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-10">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="主视图" mermaidId="e:VIEW_DETAIL-&gt;MVIEW#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.63;entryX=0.5;entryY=0;" mermaidBaseValue="主视图" id="BTFGSoNFcPAp8HPmbgpN-54">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-10" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.63;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-11">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="2557" y="774" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="投影" mermaidId="e:VIEW_DETAIL-&gt;PROJ#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.75;entryX=0.5;entryY=0;" mermaidBaseValue="投影" id="BTFGSoNFcPAp8HPmbgpN-55">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-10" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.75;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-12">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="2375" y="774" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="剖视" mermaidId="e:VIEW_DETAIL-&gt;SECT#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.65;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="剖视" id="BTFGSoNFcPAp8HPmbgpN-56">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-10" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.65;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-13">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="2209" y="774" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="局部" mermaidId="e:VIEW_DETAIL-&gt;DETAIL#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.85;entryX=0.5;entryY=0;" mermaidBaseValue="局部" id="BTFGSoNFcPAp8HPmbgpN-57">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-10" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.85;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-14">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="2043" y="774" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:DIM-&gt;DIM_DETAIL#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-58">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-7" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-15">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="线性" mermaidId="e:DIM_DETAIL-&gt;LINEAR#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.62;entryX=0.5;entryY=0;" mermaidBaseValue="线性" id="BTFGSoNFcPAp8HPmbgpN-59">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-15" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.62;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-16">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1853" y="774" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="角度" mermaidId="e:DIM_DETAIL-&gt;ANGULAR#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.73;entryX=0.5;entryY=0;" mermaidBaseValue="角度" id="BTFGSoNFcPAp8HPmbgpN-60">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-15" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.73;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-17">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1663" y="774" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="径向" mermaidId="e:DIM_DETAIL-&gt;RADIAL#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.69;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="径向" id="BTFGSoNFcPAp8HPmbgpN-61">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-15" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.69;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-18">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1485" y="774" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="基准" mermaidId="e:DIM_DETAIL-&gt;DATUM#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.83;entryX=0.5;entryY=0;" mermaidBaseValue="基准" id="BTFGSoNFcPAp8HPmbgpN-62">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-15" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.83;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-19">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1307" y="774" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:TOL-&gt;TOL_DETAIL#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-63">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-8" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-20">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="尺寸公差" mermaidId="e:TOL_DETAIL-&gt;SIZETOL#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.63;entryX=0.5;entryY=0;" mermaidBaseValue="尺寸公差" id="BTFGSoNFcPAp8HPmbgpN-64">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-20" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.63;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-21">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1127" y="774" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="形位公差" mermaidId="e:TOL_DETAIL-&gt;GDTOL#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.74;entryX=0.5;entryY=0;" mermaidBaseValue="形位公差" id="BTFGSoNFcPAp8HPmbgpN-65">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-20" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.74;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-22">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="943" y="774" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="位置公差" mermaidId="e:TOL_DETAIL-&gt;POSTOL#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.65;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="位置公差" id="BTFGSoNFcPAp8HPmbgpN-66">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-20" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.65;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-23">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="772" y="774" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="原则" mermaidId="e:TOL_DETAIL-&gt;PRINCIPLE#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.84;entryX=0.5;entryY=0;" mermaidBaseValue="原则" id="BTFGSoNFcPAp8HPmbgpN-67">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-20" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.84;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-24">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="603" y="774" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:SURF-&gt;SURF_DETAIL#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-68">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-9" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-25">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="粗糙度" mermaidId="e:SURF_DETAIL-&gt;ROUGH#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.74;entryX=0.5;entryY=0;" mermaidBaseValue="粗糙度" id="BTFGSoNFcPAp8HPmbgpN-69">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-25" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.74;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-26">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="433" y="774" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="焊接" mermaidId="e:SURF_DETAIL-&gt;WELD#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.67;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="焊接" id="BTFGSoNFcPAp8HPmbgpN-70">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-25" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.67;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-27">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="266" y="774" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="注释" mermaidId="e:SURF_DETAIL-&gt;NOTE#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.83;entryX=0.5;entryY=0;" mermaidBaseValue="注释" id="BTFGSoNFcPAp8HPmbgpN-71">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-25" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.83;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-28">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="92" y="774" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:MVIEW-&gt;MERGE1#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.33;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-72">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-11" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.33;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-29">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="2557" y="888" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:PROJ-&gt;MERGE1#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.19;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-73">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-12" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.19;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-29">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="2375" y="888" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:SECT-&gt;MERGE1#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.62;entryY=0;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-74">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-13" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.62;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-29">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="2209" y="888" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:DETAIL-&gt;MERGE1#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0;entryY=0.06;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-75">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-14" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0;entryY=0.06;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-29">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="2043" y="888" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:LINEAR-&gt;MERGE2#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.35;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-76">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-16" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.35;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-30">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1853" y="888" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:ANGULAR-&gt;MERGE2#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.2;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-77">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-17" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.2;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-30">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1663" y="888" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:RADIAL-&gt;MERGE2#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.65;entryY=0;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-78">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-18" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.65;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-30">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1485" y="888" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:DATUM-&gt;MERGE2#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0;entryY=0.07;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-79">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-19" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0;entryY=0.07;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-30">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1307" y="888" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:SIZETOL-&gt;MERGE3#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.33;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-80">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-21" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.33;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-31">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1127" y="888" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:GDTOL-&gt;MERGE3#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.19;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-81">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-22" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.19;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-31">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="943" y="888" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:POSTOL-&gt;MERGE3#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.62;entryY=0;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-82">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-23" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.62;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-31">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="772" y="888" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:PRINCIPLE-&gt;MERGE3#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0;entryY=0.07;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-83">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-24" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0;entryY=0.07;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-31">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="603" y="888" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:ROUGH-&gt;MERGE4#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.19;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-84">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-26" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.19;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-32">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="433" y="888" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:WELD-&gt;MERGE4#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.64;entryY=0;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-85">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-27" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.64;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-32">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="266" y="888" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:NOTE-&gt;MERGE4#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0;entryY=0.07;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-86">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-28" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0;entryY=0.07;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-32">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="92" y="888" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:MERGE1-&gt;AGGREGATE#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.42;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-87">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-29" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.42;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-33">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="2181" y="992" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:MERGE2-&gt;AGGREGATE#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.21;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-88">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-30" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.21;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-33">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1451" y="992" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:MERGE3-&gt;AGGREGATE#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0;entryY=0.36;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-89">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-31" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0;entryY=0.36;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-33">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="743" y="992" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:MERGE4-&gt;AGGREGATE#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0;entryY=0.42;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-90">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-32" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0;entryY=0.42;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-33">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="234" y="992" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:AGGREGATE-&gt;VALIDATE#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-91">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-33" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-34">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="规则检查" mermaidId="e:VALIDATE-&gt;RULES#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.71;entryX=0.5;entryY=0;" mermaidBaseValue="规则检查" id="BTFGSoNFcPAp8HPmbgpN-92">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-34" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.71;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-35">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1523" y="1361" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="完整性" mermaidId="e:VALIDATE-&gt;COMPLETE#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.56;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="完整性" id="BTFGSoNFcPAp8HPmbgpN-93">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-34" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.56;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-36">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1232" y="1361" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="干涉" mermaidId="e:VALIDATE-&gt;INTERFERE#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.83;entryX=0.5;entryY=0;" mermaidBaseValue="干涉" id="BTFGSoNFcPAp8HPmbgpN-94">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-34" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.83;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-37">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1023" y="1361" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:RULES-&gt;ISSUES#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.34;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-95">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-35" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.34;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-38">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1523" y="1494" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:COMPLETE-&gt;ISSUES#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-96">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-36" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-38">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:INTERFERE-&gt;ISSUES#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0;entryY=0.29;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-97">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-37" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0;entryY=0.29;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-38">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1023" y="1494" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="有" mermaidId="e:ISSUES-&gt;FIX#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.84;entryX=1;entryY=0.04;" mermaidBaseValue="有" id="BTFGSoNFcPAp8HPmbgpN-98">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-38" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.84;entryX=1;entryY=0.04;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-39">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1086" y="1681" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="无" mermaidId="e:ISSUES-&gt;PUBLISH#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.59;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="无" id="BTFGSoNFcPAp8HPmbgpN-99">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-38" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.59;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-40">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1250" y="1681" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:FIX-&gt;VALIDATE#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.45;exitY=0;entryX=0;entryY=0.71;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-100">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-39" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.45;exitY=0;entryX=0;entryY=0.71;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-34">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="912" y="1681" />
+                <mxPoint x="912" y="1583" />
+                <mxPoint x="912" y="1494" />
+                <mxPoint x="912" y="1432" />
+                <mxPoint x="912" y="1361" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:PUBLISH-&gt;FORMAT#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-101">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-40" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-41">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="STEP AP242" mermaidId="e:FORMAT-&gt;STEP#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.69;entryX=0.5;entryY=0;" mermaidBaseValue="STEP AP242" id="BTFGSoNFcPAp8HPmbgpN-102">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-41" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.69;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-42">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1502" y="1992" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="JT" mermaidId="e:FORMAT-&gt;JT#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.93;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="JT" id="BTFGSoNFcPAp8HPmbgpN-103">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-41" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.93;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-43">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1331" y="1992" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Native" mermaidId="e:FORMAT-&gt;NATIVE#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.04;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="Native" id="BTFGSoNFcPAp8HPmbgpN-104">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-41" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0.04;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-44">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1165" y="1992" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="3D PDF" mermaidId="e:FORMAT-&gt;PDF#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.69;entryX=0.5;entryY=0;" mermaidBaseValue="3D PDF" id="BTFGSoNFcPAp8HPmbgpN-105">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-41" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);html=1;fontSize=16;labelBackgroundColor=light-dark(#E8E8E88D,#2a2a2a8D);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.69;entryX=0.5;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-45">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="998" y="1992" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:STEP-&gt;END#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.26;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-106">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-42" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.26;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-46">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1502" y="2124" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:JT-&gt;END#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.82;entryY=0;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-107">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-43" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.82;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-46">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1331" y="2124" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:NATIVE-&gt;END#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.18;entryY=0;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-108">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-44" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.18;entryY=0;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-46">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1165" y="2124" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:PDF-&gt;END#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0;entryY=0.23;" mermaidBaseValue="" id="BTFGSoNFcPAp8HPmbgpN-109">
+          <mxCell edge="1" parent="BTFGSoNFcPAp8HPmbgpN-2" source="BTFGSoNFcPAp8HPmbgpN-45" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0;entryY=0.23;rounded=0;" target="BTFGSoNFcPAp8HPmbgpN-46">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="998" y="2124" />
               </Array>
             </mxGeometry>
           </mxCell>
