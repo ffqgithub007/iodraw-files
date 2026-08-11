@@ -1,0 +1,351 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="PMI标注智能体-AgentScope‑Java2.0架构（优化版）" id="aSYnbbjEfKhLJmYiezGB">
+    <mxGraphModel dx="2566" dy="1442" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" mermaidData="{&#xa;  &quot;data&quot;: &quot;graph TB\n    subgraph 交互层[\&quot;🖥️ 交互层 Interaction Layer\&quot;]\n        CAD_GUI[\&quot;CAD图形界面&lt;br/&gt;Creo/NX/SolidWorks\&quot;]\n        CMD[\&quot;命令行终端&lt;br/&gt;CLI Interface\&quot;]\n        WEB[\&quot;Web监控面板&lt;br/&gt;Dashboard\&quot;]\n    end\n    \n    subgraph 智能体层[\&quot;🧠 智能体层 Agent Layer (APBoa + AgentScope 2.0)\&quot;]\n        direction TB\n        MAIN_AGENT[\&quot;🎯 主控智能体&lt;br/&gt;PMI OrchestratorAgent\&quot;]\n        \n        subgraph 专业智能体集群[\&quot;专业智能体集群\&quot;]\n            VIEW_AGENT[\&quot;📐 视图分析智能体&lt;br/&gt;ViewAnalysisAgent&lt;br/&gt;- 主视图/投影识别&lt;br/&gt;- 剖视图生成\&quot;]\n            DIM_AGENT[\&quot;📏 尺寸标注智能体&lt;br/&gt;DimensionAgent&lt;br/&gt;- GD&amp;T规则引擎&lt;br/&gt;- 基准参考系建立\&quot;]\n            TOL_AGENT[\&quot;⚙️ 公差智能体&lt;br/&gt;ToleranceAgent&lt;br/&gt;- 尺寸公差计算&lt;br/&gt;- 形位公差匹配\&quot;]\n            SURFACE_AGENT[\&quot;🔍 表面质量智能体&lt;br/&gt;SurfaceAgent&lt;br/&gt;- 粗糙度评定&lt;br/&gt;- 表面处理建议\&quot;]\n            TEXT_AGENT[\&quot;📝 注释智能体&lt;br/&gt;AnnotationAgent&lt;br/&gt;- 技术要求生成&lt;br/&gt;- 标题栏填写\&quot;]\n            CHECK_AGENT[\&quot;✅ 校验智能体&lt;br/&gt;PMICheckerAgent&lt;br/&gt;- 完整性检查&lt;br/&gt;- 标准符合性验证\&quot;]\n        end\n        \n        KB_AGENT[\&quot;📚 知识管理智能体&lt;br/&gt;KnowledgeBaseAgent\&quot;]\n        MEMORY[\&quot;🧩 记忆模块&lt;br/&gt;ConversationMemory&lt;br/&gt;+ CAD操作历史\&quot;]\n    end\n    \n    subgraph 服务层[\&quot;⚡ 服务层 Service Layer\&quot;]\n        CAD_SERVICE[\&quot;CAD API网关&lt;br/&gt;CADServiceGateway&lt;br/&gt;- Creo Toolkit&lt;br/&gt;- NX Open&lt;br/&gt;- SolidWorks API\&quot;]\n        LLM_SERVICE[\&quot;LLM服务&lt;br/&gt;LLMService&lt;br/&gt;- DeepSeek / GPT-4&lt;br/&gt;- 领域微调模型\&quot;]\n        RULE_ENGINE[\&quot;规则引擎&lt;br/&gt;RuleEngine&lt;br/&gt;- ASME Y14.5&lt;br/&gt;- ISO 1101&lt;br/&gt;- GB/T 1182\&quot;]\n        VECTOR_DB[\&quot;向量数据库&lt;br/&gt;VectorStore&lt;br/&gt;- PMI案例库&lt;br/&gt;- 标准条款检索\&quot;]\n    end\n    \n    subgraph 数据层[\&quot;💾 数据层 Data Layer\&quot;]\n        CAD_DB[\&quot;CAD模型库&lt;br/&gt;3D Model Repo\&quot;]\n        PMI_DB[\&quot;PMI标注库&lt;br/&gt;Annotation DB\&quot;]\n        STANDARD_DB[\&quot;标准知识库&lt;br/&gt;Standards KB&lt;br/&gt;ASME/ISO/GB\&quot;]\n        FEATURE_DB[\&quot;制造特征库&lt;br/&gt;Mfg Feature DB\&quot;]\n    end\n    \n    MAIN_AGENT --&gt; VIEW_AGENT\n    MAIN_AGENT --&gt; DIM_AGENT\n    MAIN_AGENT --&gt; TOL_AGENT\n    MAIN_AGENT --&gt; SURFACE_AGENT\n    MAIN_AGENT --&gt; TEXT_AGENT\n    MAIN_AGENT --&gt; CHECK_AGENT\n    MAIN_AGENT &lt;--&gt; KB_AGENT\n    MAIN_AGENT &lt;--&gt; MEMORY\n    \n    VIEW_AGENT &amp; DIM_AGENT &amp; TOL_AGENT --&gt; CAD_SERVICE\n    MAIN_AGENT &lt;--&gt; LLM_SERVICE\n    CHECK_AGENT &lt;--&gt; RULE_ENGINE\n    KB_AGENT &lt;--&gt; VECTOR_DB\n    \n    CAD_SERVICE --&gt; CAD_DB\n    LLM_SERVICE --&gt; STANDARD_DB\n    RULE_ENGINE --&gt; PMI_DB\n    VECTOR_DB --&gt; FEATURE_DB\n    \n    CAD_GUI --&gt; CAD_SERVICE\n    CMD --&gt; MAIN_AGENT\n    WEB --&gt; MAIN_AGENT\n    \n    style 交互层 fill:#e1f5fe,stroke:#01579b\n    style 智能体层 fill:#f3e5f5,stroke:#4a148c\n    style 服务层 fill:#e8f5e9,stroke:#1b5e20\n    style 数据层 fill:#fff3e0,stroke:#e65100&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="xetWy65nlc0H6f3kfxGL-67">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry height="1722" width="2270" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="🖥️ 交互层 Interaction Layer" mermaidId="n:交互层" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=#e1f5fe;strokeColor=#01579b;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="🖥️ 交互层 Interaction Layer" id="xetWy65nlc0H6f3kfxGL-68">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-67" style="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=#e1f5fe;strokeColor=#01579b;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="143" width="2140" x="120" y="720" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="CAD图形界面&#xa;Creo/NX/SolidWorks" mermaidId="n:CAD_GUI" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="CAD图形界面&#xa;Creo/NX/SolidWorks" id="xetWy65nlc0H6f3kfxGL-69">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-68" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="297.0619946091644" x="1792.466307277628" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="命令行终端&#xa;CLI Interface" mermaidId="n:CMD" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="命令行终端&#xa;CLI Interface" id="xetWy65nlc0H6f3kfxGL-70">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-68" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="219.1913746630728" x="50.471698113207545" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Web监控面板&#xa;Dashboard" mermaidId="n:WEB" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="Web监控面板&#xa;Dashboard" id="xetWy65nlc0H6f3kfxGL-71">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-68" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="223.51752021563345" x="1496.8463611859838" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="🧠 智能体层 Agent Layer (APBoa + AgentScope 2.0)" mermaidId="n:智能体层" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=#f3e5f5;strokeColor=#4a148c;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="🧠 智能体层 Agent Layer (APBoa + AgentScope 2.0)" id="xetWy65nlc0H6f3kfxGL-72">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-67" style="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=#f3e5f5;strokeColor=#4a148c;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="355" width="2140" x="120" y="933" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="专业智能体集群" mermaidId="n:专业智能体集群" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=light-dark(#ffffde,#1f2020);strokeColor=light-dark(#aaaa33,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="专业智能体集群" id="xetWy65nlc0H6f3kfxGL-73">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-72" style="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=light-dark(#ffffde,#1f2020);strokeColor=light-dark(#aaaa33,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="182" width="1452" x="653" y="148" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="📐 视图分析智能体&#xa;ViewAnalysisAgent&#xa;- 主视图/投影识别&#xa;- 剖视图生成" mermaidId="n:VIEW_AGENT" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="📐 视图分析智能体&#xa;ViewAnalysisAgent&#xa;- 主视图/投影识别&#xa;- 剖视图生成" id="xetWy65nlc0H6f3kfxGL-74">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-73" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="112" width="199" x="748" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="📏 尺寸标注智能体&#xa;DimensionAgent&#xa;- GD&amp;T规则引擎&#xa;- 基准参考系建立" mermaidId="n:DIM_AGENT" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="📏 尺寸标注智能体&#xa;DimensionAgent&#xa;- GD&amp;T规则引擎&#xa;- 基准参考系建立" id="xetWy65nlc0H6f3kfxGL-75">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-73" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="112" width="199" x="997" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="⚙️ 公差智能体&#xa;ToleranceAgent&#xa;- 尺寸公差计算&#xa;- 形位公差匹配" mermaidId="n:TOL_AGENT" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="⚙️ 公差智能体&#xa;ToleranceAgent&#xa;- 尺寸公差计算&#xa;- 形位公差匹配" id="xetWy65nlc0H6f3kfxGL-76">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-73" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="112" width="171" x="1246" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="🔍 表面质量智能体&#xa;SurfaceAgent&#xa;- 粗糙度评定&#xa;- 表面处理建议" mermaidId="n:SURFACE_AGENT" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="🔍 表面质量智能体&#xa;SurfaceAgent&#xa;- 粗糙度评定&#xa;- 表面处理建议" id="xetWy65nlc0H6f3kfxGL-77">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-73" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="112" width="199" x="499" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="📝 注释智能体&#xa;AnnotationAgent&#xa;- 技术要求生成&#xa;- 标题栏填写" mermaidId="n:TEXT_AGENT" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="📝 注释智能体&#xa;AnnotationAgent&#xa;- 技术要求生成&#xa;- 标题栏填写" id="xetWy65nlc0H6f3kfxGL-78">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-73" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="112" width="180" x="269" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="✅ 校验智能体&#xa;PMICheckerAgent&#xa;- 完整性检查&#xa;- 标准符合性验证" mermaidId="n:CHECK_AGENT" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="✅ 校验智能体&#xa;PMICheckerAgent&#xa;- 完整性检查&#xa;- 标准符合性验证" id="xetWy65nlc0H6f3kfxGL-79">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-73" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="112" width="184" x="35" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="🎯 主控智能体&#xa;PMI OrchestratorAgent" mermaidId="n:MAIN_AGENT" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="🎯 主控智能体&#xa;PMI OrchestratorAgent" id="xetWy65nlc0H6f3kfxGL-80">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-72" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="222" x="901" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="📚 知识管理智能体&#xa;KnowledgeBaseAgent" mermaidId="n:KB_AGENT" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="📚 知识管理智能体&#xa;KnowledgeBaseAgent" id="xetWy65nlc0H6f3kfxGL-81">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-72" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="211" x="35" y="213" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="🧩 记忆模块&#xa;ConversationMemory&#xa;+ CAD操作历史" mermaidId="n:MEMORY" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="🧩 记忆模块&#xa;ConversationMemory&#xa;+ CAD操作历史" id="xetWy65nlc0H6f3kfxGL-82">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-72" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="93" width="209" x="409" y="203" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:MAIN_AGENT-&gt;VIEW_AGENT#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.68;entryX=0.5;entryY=0;" mermaidBaseValue="" id="xetWy65nlc0H6f3kfxGL-83">
+          <mxCell edge="1" parent="xetWy65nlc0H6f3kfxGL-72" source="xetWy65nlc0H6f3kfxGL-80" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.68;entryX=0.5;entryY=0;rounded=0;" target="xetWy65nlc0H6f3kfxGL-74">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1501" y="143" />
+                <mxPoint x="1501" y="168" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:MAIN_AGENT-&gt;DIM_AGENT#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.63;entryX=0.5;entryY=0;" mermaidBaseValue="" id="xetWy65nlc0H6f3kfxGL-84">
+          <mxCell edge="1" parent="xetWy65nlc0H6f3kfxGL-72" source="xetWy65nlc0H6f3kfxGL-80" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.63;entryX=0.5;entryY=0;rounded=0;" target="xetWy65nlc0H6f3kfxGL-75">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1750" y="143" />
+                <mxPoint x="1750" y="168" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:MAIN_AGENT-&gt;TOL_AGENT#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.6;entryX=0.5;entryY=0;" mermaidBaseValue="" id="xetWy65nlc0H6f3kfxGL-85">
+          <mxCell edge="1" parent="xetWy65nlc0H6f3kfxGL-72" source="xetWy65nlc0H6f3kfxGL-80" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.6;entryX=0.5;entryY=0;rounded=0;" target="xetWy65nlc0H6f3kfxGL-76">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1985" y="143" />
+                <mxPoint x="1985" y="168" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:MAIN_AGENT-&gt;SURFACE_AGENT#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.89;entryX=0.5;entryY=0;" mermaidBaseValue="" id="xetWy65nlc0H6f3kfxGL-86">
+          <mxCell edge="1" parent="xetWy65nlc0H6f3kfxGL-72" source="xetWy65nlc0H6f3kfxGL-80" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=1;exitY=0.89;entryX=0.5;entryY=0;rounded=0;" target="xetWy65nlc0H6f3kfxGL-77">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1252" y="143" />
+                <mxPoint x="1252" y="168" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:MAIN_AGENT-&gt;TEXT_AGENT#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="xetWy65nlc0H6f3kfxGL-87">
+          <mxCell edge="1" parent="xetWy65nlc0H6f3kfxGL-72" source="xetWy65nlc0H6f3kfxGL-80" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="xetWy65nlc0H6f3kfxGL-78">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:MAIN_AGENT-&gt;CHECK_AGENT#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.9;entryX=0.5;entryY=0;" mermaidBaseValue="" id="xetWy65nlc0H6f3kfxGL-88">
+          <mxCell edge="1" parent="xetWy65nlc0H6f3kfxGL-72" source="xetWy65nlc0H6f3kfxGL-80" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.9;entryX=0.5;entryY=0;rounded=0;" target="xetWy65nlc0H6f3kfxGL-79">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="780" y="143" />
+                <mxPoint x="780" y="168" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:MAIN_AGENT-&gt;KB_AGENT#0" mermaidBaseStyle="curved=1;startArrow=block;startSize=7;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.6;entryX=0.5;entryY=0;" mermaidBaseValue="" id="xetWy65nlc0H6f3kfxGL-89">
+          <mxCell edge="1" parent="xetWy65nlc0H6f3kfxGL-72" source="xetWy65nlc0H6f3kfxGL-80" style="curved=1;startArrow=block;startSize=7;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.6;entryX=0.5;entryY=0;rounded=0;" target="xetWy65nlc0H6f3kfxGL-81">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="141" y="143" />
+                <mxPoint x="141" y="168" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:MAIN_AGENT-&gt;MEMORY#0" mermaidBaseStyle="curved=1;startArrow=block;startSize=7;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.68;entryX=0.5;entryY=0;" mermaidBaseValue="" id="xetWy65nlc0H6f3kfxGL-90">
+          <mxCell edge="1" parent="xetWy65nlc0H6f3kfxGL-72" source="xetWy65nlc0H6f3kfxGL-80" style="curved=1;startArrow=block;startSize=7;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.68;entryX=0.5;entryY=0;rounded=0;" target="xetWy65nlc0H6f3kfxGL-82">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="514" y="143" />
+                <mxPoint x="514" y="168" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="⚡ 服务层 Service Layer" mermaidId="n:服务层" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=#e8f5e9;strokeColor=#1b5e20;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="⚡ 服务层 Service Layer" id="xetWy65nlc0H6f3kfxGL-91">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-67" style="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=#e8f5e9;strokeColor=#1b5e20;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="201" width="2118" x="142" y="1318" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="CAD API网关&#xa;CADServiceGateway&#xa;- Creo Toolkit&#xa;- NX Open&#xa;- SolidWorks API" mermaidId="n:CAD_SERVICE" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="CAD API网关&#xa;CADServiceGateway&#xa;- Creo Toolkit&#xa;- NX Open&#xa;- SolidWorks API" id="xetWy65nlc0H6f3kfxGL-92">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-91" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="131" width="220.6023601847101" x="1859.3627501282708" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="LLM服务&#xa;LLMService&#xa;- DeepSeek / GPT-4&#xa;- 领域微调模型" mermaidId="n:LLM_SERVICE" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="LLM服务&#xa;LLMService&#xa;- DeepSeek / GPT-4&#xa;- 领域微调模型" id="xetWy65nlc0H6f3kfxGL-93">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-91" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="112" width="217.3422267829656" x="273.85120574653666" y="55" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="规则引擎&#xa;RuleEngine&#xa;- ASME Y14.5&#xa;- ISO 1101&#xa;- GB/T 1182" mermaidId="n:RULE_ENGINE" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="规则引擎&#xa;RuleEngine&#xa;- ASME Y14.5&#xa;- ISO 1101&#xa;- GB/T 1182" id="xetWy65nlc0H6f3kfxGL-94">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-91" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="131" width="165.18009235505386" x="741.1369933299128" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="向量数据库&#xa;VectorStore&#xa;- PMI案例库&#xa;- 标准条款检索" mermaidId="n:VECTOR_DB" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="向量数据库&#xa;VectorStore&#xa;- PMI案例库&#xa;- 标准条款检索" id="xetWy65nlc0H6f3kfxGL-95">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-91" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="112" width="181.4807593637763" x="38.03488968701898" y="55" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="💾 数据层 Data Layer" mermaidId="n:数据层" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=#fff3e0;strokeColor=#e65100;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="💾 数据层 Data Layer" id="xetWy65nlc0H6f3kfxGL-96">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-67" style="html=1;whiteSpace=wrap;strokeWidth=1;verticalAlign=top;fillColor=#fff3e0;strokeColor=#e65100;fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="163" width="2119" x="141" y="1549" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="CAD模型库&#xa;3D Model Repo" mermaidId="n:CAD_DB" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="CAD模型库&#xa;3D Model Repo" id="xetWy65nlc0H6f3kfxGL-97">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-96" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="181.06421543241845" x="1899.5282237182807" y="55" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="PMI标注库&#xa;Annotation DB" mermaidId="n:PMI_DB" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="PMI标注库&#xa;Annotation DB" id="xetWy65nlc0H6f3kfxGL-98">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-96" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="177.77213878819265" x="744.0093215950285" y="55" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="标准知识库&#xa;Standards KB&#xa;ASME/ISO/GB" mermaidId="n:STANDARD_DB" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="标准知识库&#xa;Standards KB&#xa;ASME/ISO/GB" id="xetWy65nlc0H6f3kfxGL-99">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-96" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="93" width="172.28534438114966" x="301.77369238736406" y="45" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="制造特征库&#xa;Mfg Feature DB" mermaidId="n:FEATURE_DB" mermaidBaseStyle="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" mermaidBaseValue="制造特征库&#xa;Mfg Feature DB" id="xetWy65nlc0H6f3kfxGL-100">
+          <mxCell parent="xetWy65nlc0H6f3kfxGL-96" style="html=1;whiteSpace=wrap;strokeWidth=1;fillColor=light-dark(#ECECFF,#1f2020);strokeColor=light-dark(#9370DB,#cccccc);fontColor=light-dark(#333333,#cccccc);fontFamily=Trebuchet MS,Verdana,Arial,sans-serif;fontSize=16;" vertex="1">
+            <mxGeometry height="73" width="185.45365095805283" x="38.40756084930088" y="55" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:VIEW_AGENT-&gt;CAD_SERVICE#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.54;exitY=1;entryX=0;entryY=0.29;" mermaidBaseValue="" id="xetWy65nlc0H6f3kfxGL-101">
+          <mxCell edge="1" parent="xetWy65nlc0H6f3kfxGL-67" source="xetWy65nlc0H6f3kfxGL-74" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.54;exitY=1;entryX=0;entryY=0.29;rounded=0;" target="xetWy65nlc0H6f3kfxGL-92">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1621" y="1263" />
+                <mxPoint x="1621" y="1288" />
+                <mxPoint x="1621" y="1313" />
+                <mxPoint x="1621" y="1338" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:DIM_AGENT-&gt;CAD_SERVICE#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.54;exitY=1;entryX=0.2;entryY=0;" mermaidBaseValue="" id="xetWy65nlc0H6f3kfxGL-102">
+          <mxCell edge="1" parent="xetWy65nlc0H6f3kfxGL-67" source="xetWy65nlc0H6f3kfxGL-75" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.54;exitY=1;entryX=0.2;entryY=0;rounded=0;" target="xetWy65nlc0H6f3kfxGL-92">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1870" y="1263" />
+                <mxPoint x="1870" y="1288" />
+                <mxPoint x="1870" y="1313" />
+                <mxPoint x="1870" y="1338" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:TOL_AGENT-&gt;CAD_SERVICE#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.55;exitY=1;entryX=1;entryY=0.03;" mermaidBaseValue="" id="xetWy65nlc0H6f3kfxGL-103">
+          <mxCell edge="1" parent="xetWy65nlc0H6f3kfxGL-67" source="xetWy65nlc0H6f3kfxGL-76" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.55;exitY=1;entryX=1;entryY=0.03;rounded=0;" target="xetWy65nlc0H6f3kfxGL-92">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="2105" y="1263" />
+                <mxPoint x="2105" y="1288" />
+                <mxPoint x="2105" y="1313" />
+                <mxPoint x="2105" y="1338" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:MAIN_AGENT-&gt;LLM_SERVICE#0" mermaidBaseStyle="curved=1;startArrow=block;startSize=7;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.64;entryX=0.5;entryY=0;" mermaidBaseValue="" id="xetWy65nlc0H6f3kfxGL-104">
+          <mxCell edge="1" parent="xetWy65nlc0H6f3kfxGL-67" source="xetWy65nlc0H6f3kfxGL-80" style="curved=1;startArrow=block;startSize=7;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0;exitY=0.64;entryX=0.5;entryY=0;rounded=0;" target="xetWy65nlc0H6f3kfxGL-93">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="494" y="1076" />
+                <mxPoint x="494" y="1101" />
+                <mxPoint x="494" y="1182" />
+                <mxPoint x="494" y="1263" />
+                <mxPoint x="494" y="1288" />
+                <mxPoint x="494" y="1313" />
+                <mxPoint x="494" y="1338" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:CHECK_AGENT-&gt;RULE_ENGINE#0" mermaidBaseStyle="curved=1;startArrow=block;startSize=7;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.54;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="xetWy65nlc0H6f3kfxGL-105">
+          <mxCell edge="1" parent="xetWy65nlc0H6f3kfxGL-67" source="xetWy65nlc0H6f3kfxGL-79" style="curved=1;startArrow=block;startSize=7;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.54;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="xetWy65nlc0H6f3kfxGL-94">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:KB_AGENT-&gt;VECTOR_DB#0" mermaidBaseStyle="curved=1;startArrow=block;startSize=7;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="xetWy65nlc0H6f3kfxGL-106">
+          <mxCell edge="1" parent="xetWy65nlc0H6f3kfxGL-67" source="xetWy65nlc0H6f3kfxGL-81" style="curved=1;startArrow=block;startSize=7;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="xetWy65nlc0H6f3kfxGL-95">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:CAD_SERVICE-&gt;CAD_DB#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="xetWy65nlc0H6f3kfxGL-107">
+          <mxCell edge="1" parent="xetWy65nlc0H6f3kfxGL-67" source="xetWy65nlc0H6f3kfxGL-92" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="xetWy65nlc0H6f3kfxGL-97">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:LLM_SERVICE-&gt;STANDARD_DB#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="xetWy65nlc0H6f3kfxGL-108">
+          <mxCell edge="1" parent="xetWy65nlc0H6f3kfxGL-67" source="xetWy65nlc0H6f3kfxGL-93" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="xetWy65nlc0H6f3kfxGL-99">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:RULE_ENGINE-&gt;PMI_DB#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="xetWy65nlc0H6f3kfxGL-109">
+          <mxCell edge="1" parent="xetWy65nlc0H6f3kfxGL-67" source="xetWy65nlc0H6f3kfxGL-94" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="xetWy65nlc0H6f3kfxGL-98">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:VECTOR_DB-&gt;FEATURE_DB#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;" mermaidBaseValue="" id="xetWy65nlc0H6f3kfxGL-110">
+          <mxCell edge="1" parent="xetWy65nlc0H6f3kfxGL-67" source="xetWy65nlc0H6f3kfxGL-95" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="xetWy65nlc0H6f3kfxGL-100">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:CAD_GUI-&gt;CAD_SERVICE#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.27;" mermaidBaseValue="" id="xetWy65nlc0H6f3kfxGL-111">
+          <mxCell edge="1" parent="xetWy65nlc0H6f3kfxGL-67" source="xetWy65nlc0H6f3kfxGL-69" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.27;rounded=0;" target="xetWy65nlc0H6f3kfxGL-92">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="2265" y="903" />
+                <mxPoint x="2265" y="928" />
+                <mxPoint x="2265" y="953" />
+                <mxPoint x="2265" y="1015" />
+                <mxPoint x="2265" y="1076" />
+                <mxPoint x="2265" y="1101" />
+                <mxPoint x="2265" y="1182" />
+                <mxPoint x="2265" y="1263" />
+                <mxPoint x="2265" y="1288" />
+                <mxPoint x="2265" y="1313" />
+                <mxPoint x="2265" y="1338" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:CMD-&gt;MAIN_AGENT#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.23;entryY=0;" mermaidBaseValue="" id="xetWy65nlc0H6f3kfxGL-112">
+          <mxCell edge="1" parent="xetWy65nlc0H6f3kfxGL-67" source="xetWy65nlc0H6f3kfxGL-70" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=0.23;entryY=0;rounded=0;" target="xetWy65nlc0H6f3kfxGL-80">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="1030" y="903" />
+                <mxPoint x="1030" y="928" />
+                <mxPoint x="1030" y="953" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" mermaidId="e:WEB-&gt;MAIN_AGENT#0" mermaidBaseStyle="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.4;" mermaidBaseValue="" id="xetWy65nlc0H6f3kfxGL-113">
+          <mxCell edge="1" parent="xetWy65nlc0H6f3kfxGL-67" source="xetWy65nlc0H6f3kfxGL-71" style="curved=1;startArrow=none;endArrow=block;endSize=7;strokeColor=light-dark(#333333,#cccccc);exitX=0.5;exitY=1;entryX=1;entryY=0.4;rounded=0;" target="xetWy65nlc0H6f3kfxGL-80">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="2035" y="903" />
+                <mxPoint x="2035" y="928" />
+                <mxPoint x="2035" y="953" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
